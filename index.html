@@ -1,0 +1,3480 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>7 кроків до трендових плетінь — онлайн‑курс (Петрик Аліна)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Playfair+Display:wght@700;800;900&family=Italiana&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Преміальна палітра: чорний + темно‑фіолетовий/темно‑рожевий */
+  --bg:#0b0b10;
+  --bg2:#0f0f17;
+  --card:#141421;
+  --card2:#10101a;
+  --stroke:rgba(255,255,255,.10);
+  --text:#ffffff;
+  --muted:rgba(255,255,255,.82);
+
+  --accent:#4b1d8b;     /* темно‑фіолетовий */
+  --accent2:#8b1d5a;    /* темно‑рожевий */
+  --accentGlow: rgba(139,29,90,.35);
+
+  --shadow: 0 18px 48px rgba(0,0,0,.45);
+  --radius: 16px;
+  --max: 980px;
+  --stickyH: 92px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: Montserrat, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding-bottom: var(--stickyH);
+}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+.section{padding:64px 0}
+.h2{
+  text-align:center;
+  font-size:38px;
+  line-height:1.15;
+  margin:0 0 22px;
+  font-weight:700;
+  letter-spacing:.01em;
+}
+.h2.upper{text-transform:uppercase; letter-spacing:.14em; font-weight:500}
+.hint{
+  text-align:center;
+  max-width:860px;
+  margin:0 auto 26px;
+  color: rgba(255,255,255,.78);
+  font-size:15px;
+  line-height:1.5;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:74px 0 52px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:url("./hero.jpg") center 25%/cover no-repeat;
+  transform:scale(1.02);
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1000px 600px at 50% 25%, rgba(75,29,139,.09), rgba(0,0,0,0) 55%),
+    radial-gradient(900px 550px at 55% 45%, rgba(139,29,90,.07), rgba(0,0,0,0) 60%),
+    /* Верх: затемнення під верхніми написами; середина: фото світліше; низ: від таймера і вниз плавно темніше */
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.52) 0%,
+      rgba(0,0,0,.26) 18%,
+      rgba(0,0,0,.10) 38%,
+      rgba(0,0,0,.08) 52%,
+      /* Починаючи від області таймера робимо темніше + плавний перехід у колір 2-го блоку (var(--bg2)) */
+      rgba(15,15,23,.32) 58%,
+      rgba(15,15,23,.58) 64%,
+      rgba(15,15,23,.84) 72%,
+      rgba(15,15,23,.94) 82%,
+      rgba(15,15,23,.995) 90%,
+      rgba(15,15,23,1) 100%
+    );
+}
+.hero .wrap{position:relative; z-index:1}
+
+.hero-topbar{
+  position:absolute;
+  top:16px;
+  left:0; right:0;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  padding:0 14px;
+  text-align:center;
+  pointer-events:none;
+}
+.hero-topline{
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:14px;
+  line-height:1.2;
+  color:rgba(255,255,255,.94);
+  text-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+.hero-topline--sub{
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.88);
+}
+@media (min-width: 900px){
+  .hero-topbar{top:20px;}
+  .hero-topline{font-size:15px;}
+  .hero-topline--sub{font-size:14px;}
+}
+
+
+.topline{
+  font-weight:500;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  font-size:13px;
+  opacity:.92;
+}
+.topline + .topline{margin-top:6px}
+.badge{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  margin-top:14px;
+  font-size:12px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+.badge b{
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  font-weight:800;
+}
+
+.h1{
+  margin:22px 0 14px;
+  font-size:44px;
+  line-height:1.12;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  font-weight:400;
+}
+.h1 b{font-weight:800}
+.sub{
+  margin:0 auto 18px;
+  max-width:820px;
+  font-size:19px;
+  line-height:1.45;
+  color:rgba(255,255,255,.88);
+  font-weight:400;
+}
+
+.price{
+  margin:18px 0 18px;
+  font-size:18px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.90);
+  white-space:normal;
+}
+.price .now{
+  display:inline-block;
+  font-weight:900;
+  font-size:1.65em; /* 890 грн — ще більше */
+  padding:3px 12px;
+  border-radius:999px;
+  color:#fff;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  box-shadow: 0 16px 42px rgba(139,29,90,.32), 0 0 46px rgba(255,77,122,.22), 0 0 34px rgba(75,29,139,.26);
+  text-shadow: 0 0 22px rgba(255,77,122,.40);
+}
+.price .old{
+  text-decoration:line-through;
+  opacity:.85;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:14px 20px;                 /* менша */
+  min-width: 240px;                  /* менша */
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-weight:900;
+  font-size:13px;
+  border-radius:999px;               /* овальна */
+  color:#fff;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  box-shadow: 0 22px 52px rgba(0,0,0,.48), 0 18px 44px rgba(75,29,139,.22), 0 0 46px rgba(139,29,90,.20);
+  position:relative;
+  overflow:hidden;
+  transform: translateZ(0);
+  transition: transform .18s ease, filter .18s ease;
+}
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:-40% -140%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.62) 25%, transparent 55%);
+  transform: rotate(12deg);
+  opacity:.60;
+  animation: btnSheenMain 2.6s ease-in-out infinite;
+}
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: radial-gradient(65% 65% at 50% 40%, rgba(255,77,122,.32), rgba(0,0,0,0) 70%);
+  opacity:.55;
+  filter: blur(10px);
+}
+.btn > *{position:relative; z-index:1}
+@keyframes btnSheenMain{0%{transform:translateX(-45%) rotate(12deg)}50%{transform:translateX(26%) rotate(12deg)}100%{transform:translateX(115%) rotate(12deg)}}
+.btn:hover{transform: translateY(-1px) scale(1.01); filter: brightness(1.06)}
+.btn:active{
+  transform: translateY(1px) scale(.97);
+  filter: brightness(1.03);
+}
+/* «натиск» також через JS на pointerdown, щоб на мобільних виглядало стабільно */
+.btn.is-pressed{
+  transform: translateY(1px) scale(.97);
+  filter: brightness(1.03);
+}
+.btn.is-pressed::before{opacity:.40; animation-play-state: paused;}
+
+.btn .check{
+  width:30px;height:30px;border-radius:999px;
+  background: rgba(0,0,0,.22);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 12px 20px rgba(0,0,0,.35);
+}
+.btn svg{width:18px;height:18px}
+
+.timer{
+  margin:20px auto 8px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.tbox{
+  width:164px;height:110px;
+  border-radius:10px;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.tbox::before{
+  content:"";
+  position:absolute; inset:-1px;
+  background: linear-gradient(135deg, rgba(139,29,90,.28), rgba(75,29,139,.20));
+  opacity:.55;
+  filter: blur(0);
+}
+.tbox > *{position:relative; z-index:1}
+.tbox .num{font-size:54px;font-weight:300;line-height:1}
+.tbox .lbl{margin-top:8px;font-size:18px;font-weight:300;opacity:.78}
+
+.checks{
+  list-style:none;
+  padding:0;
+  margin:22px auto 0;
+  max-width:860px;
+  text-align:left;
+  color: rgba(255,255,255,.90);
+  font-size:17px;
+  line-height:1.5;
+}
+.checks li{display:flex;gap:12px;margin:10px 0;align-items:flex-start}
+.tick{
+  width:24px;height:24px;flex:0 0 24px;
+  border-radius:7px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  display:flex;align-items:center;justify-content:center;
+  margin-top:2px;
+  box-shadow: 0 12px 22px rgba(139,29,90,.22);
+}
+.tick svg{width:16px;height:16px}
+.mini{
+  color: rgba(255,255,255,.78);
+  font-size:14px;
+  margin-top:18px;
+}
+
+/* "Кому підійде" */
+.light-panel{
+  position: relative;
+  /* Плавний мікс кольорів на стику з HERO (без видимого шва) */
+  background:
+    linear-gradient(180deg,
+      rgba(15,15,23,1) 0px,
+      rgba(15,15,23,1) 18px,
+      rgba(15,15,23,.85) 48px,
+      rgba(15,15,23,0) 180px
+    ),
+    radial-gradient(900px 520px at 50% 0%, rgba(139,29,90,.18), rgba(0,0,0,0) 58%),
+    var(--bg2);
+  border-top:0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.cards3{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+.card{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  padding:18px 16px;
+  box-shadow: 0 18px 44px rgba(0,0,0,.35);
+}
+.card .icon{
+  width:44px;height:44px;border-radius:999px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 16px 34px rgba(75,29,139,.22);
+  margin-bottom:12px;
+}
+.card h3{margin:0 0 8px;font-size:16px;letter-spacing:.02em}
+.card p{margin:0;color:rgba(255,255,255,.78);font-size:14px;line-height:1.5}
+
+/* Автор */
+.author{
+  background: var(--bg);
+}
+.author-grid{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap:18px;
+  align-items:stretch;
+}
+.author-photo{
+  border-radius: 16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  min-height: 340px;
+  position:relative;
+}
+.author-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.author-photo::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.45));
+}
+.author-card{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:18px 18px;
+  box-shadow: var(--shadow);
+}
+.author-card .name{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.02em;
+  margin:0 0 10px;
+}
+.author-card .name span{
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.author-card p{margin:0 0 12px;color:rgba(255,255,255,.84);line-height:1.6;font-size:15px}
+.author-card ul{margin:12px 0 0;padding-left:18px;color:rgba(255,255,255,.84)}
+.author-card li{margin:8px 0}
+
+/* Social proof (імітація скріну повідомлень) */
+.proof{
+  background: radial-gradient(900px 520px at 50% 0%, rgba(75,29,139,.18), rgba(0,0,0,0) 58%), var(--bg2);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.phone{
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 26px;
+  padding: 14px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+}
+.phone .screen{
+  border-radius: 18px;
+  background: #0a0a12;
+  border:1px solid rgba(255,255,255,.08);
+  padding: 16px;
+}
+.msg{
+  display:flex;
+  gap:10px;
+  margin:12px 0;
+  align-items:flex-start;
+}
+.msg img{
+  width:38px;height:38px;border-radius:999px;object-fit:cover;
+  border:2px solid rgba(139,29,90,.28);
+}
+.bubble{
+  background: rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding: 12px 12px;
+  color: rgba(255,255,255,.90);
+  font-size:14px;
+  line-height:1.45;
+  position:relative;
+}
+.bubble::before{
+  content:"";
+  position:absolute;
+  left:-8px; top:14px;
+  width:0;height:0;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-right:8px solid rgba(255,255,255,.10);
+}
+.bubble::after{
+  content:"";
+  position:absolute;
+  left:-7px; top:14px;
+  width:0;height:0;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-right:8px solid rgba(255,255,255,.08);
+}
+
+/* Програма */
+.program{
+  background: var(--bg);
+}
+.program-bg{
+  position:relative;
+  padding:38px 0 10px;
+}
+.program-bg::before{
+  content:"";
+  position:absolute; inset:0;
+  background:url("./blur.jpg") center/cover no-repeat;
+  filter: blur(10px) saturate(.95);
+  transform: scale(1.04);
+  opacity:.35;
+}
+.program-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(900px 520px at 50% 0%, rgba(139,29,90,.22), rgba(0,0,0,0) 60%),
+              rgba(0,0,0,.58);
+}
+.program-bg .wrap{position:relative; z-index:1}
+
+.step{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:20px 18px;
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  box-shadow: var(--shadow);
+  margin:16px auto;
+  max-width: 920px;
+}
+.step .pic{
+  width:92px;height:92px;border-radius:999px;
+  overflow:hidden;flex:0 0 92px;
+  border:2px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 34px rgba(0,0,0,.35);
+}
+.step .pic img{width:100%;height:100%;object-fit:cover}
+.step .krok{
+  font-weight:800;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin:0 0 6px;
+  font-size:15px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.step ul{margin:0;padding-left:18px}
+.step li{
+  color:rgba(255,255,255,.90);
+  font-size:16px;
+  line-height:1.45;
+  margin:6px 0;
+  font-weight:400;
+}
+.step .highlight{color:#fff; font-weight:700}
+
+/* Як проходить курс */
+.how{
+  background: radial-gradient(900px 520px at 50% 0%, rgba(139,29,90,.18), rgba(0,0,0,0) 58%), var(--bg2);
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.how-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+}
+.how-item{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:18px 16px;
+  box-shadow: var(--shadow);
+}
+.how-item .icon{
+  width:46px;height:46px;border-radius:999px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 16px 34px rgba(139,29,90,.22);
+  margin-bottom:12px;
+}
+.how-item h3{margin:0 0 8px;font-size:16px}
+.how-item p{margin:0;color:rgba(255,255,255,.78);font-size:14px;line-height:1.5}
+
+/* Відгуки (слайдер як у скролі) */
+.reviews{
+  background: #111118;
+}
+.slider{
+  position:relative;
+  max-width: 920px;
+  margin:0 auto;
+  padding:0 56px 22px;
+}
+.frame{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:16px;
+  box-shadow: var(--shadow);
+}
+.slide{display:none}
+.slide.active{display:block}
+.chat{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  padding:16px 16px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  position:relative;
+}
+.chat::after{
+  content:"";
+  position:absolute;
+  right:18px; bottom:-10px;
+  width:0;height:0;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-top:10px solid rgba(255,255,255,.10);
+}
+.chat img{
+  width:42px;height:42px;border-radius:999px;object-fit:cover;flex:0 0 42px;
+  border:2px solid rgba(139,29,90,.28);
+}
+.chat .txt{
+  font-size:18px;
+  line-height:1.35;
+  color:rgba(255,255,255,.93);
+  font-weight:400;
+}
+.chat .like{
+  position:absolute; right:10px; bottom:10px;
+  width:34px;height:34px;border-radius:999px;
+  background: rgba(0,0,0,.22);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.chat .like span{color:#ff4d5a;font-size:18px; transform: translateY(1px)}
+.navbtn{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:44px;height:44px;
+  border-radius:999px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  border:0;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:22px;
+  font-weight:800;
+  box-shadow: 0 18px 34px rgba(0,0,0,.35);
+}
+.navbtn.left{left:0}
+.navbtn.right{right:0}
+.dots{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:16px;
+  flex-wrap:wrap;
+}
+.dot{
+  width:11px;height:11px;border-radius:999px;
+  background: rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.22);
+  cursor:pointer;
+}
+.dot.active{
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  border-color: transparent;
+}
+
+/* Що отримаєш */
+.benefits{
+  background: var(--bg);
+}
+.benefit-stack{
+  max-width: 920px;
+  margin: 0 auto;
+  display:grid;
+  gap:16px;
+}
+.benefit-big{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:22px 18px;
+  box-shadow: var(--shadow);
+  color: rgba(255,255,255,.92);
+  line-height:1.6;
+  font-size:16px;
+}
+.benefit-card{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  padding:18px 16px;
+  box-shadow: var(--shadow);
+  text-align:center;
+}
+.benefit-card .circ{
+  width:86px;height:86px;border-radius:999px;
+  overflow:hidden;
+  margin:0 auto 12px;
+  border:2px solid rgba(255,255,255,.14);
+}
+.benefit-card .circ img{width:100%;height:100%;object-fit:cover}
+.benefit-card p{margin:0;color:#222;line-height:1.5;font-size:14px}
+
+/* BUY */
+.buy{
+  position:relative;
+  overflow:hidden;
+}
+.buy::before{
+  content:"";
+  position:absolute; inset:0;
+  background:url("./hero.jpg") center 25%/cover no-repeat;
+  opacity:.18;
+}
+.buy::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(900px 520px at 50% 0%, rgba(75,29,139,.25), rgba(0,0,0,0) 60%),
+              radial-gradient(900px 520px at 55% 40%, rgba(139,29,90,.20), rgba(0,0,0,0) 62%),
+              rgba(0,0,0,.70);
+}
+.buy .wrap{position:relative; z-index:1}
+
+.buy-card{
+  max-width: 920px;
+  margin:0 auto;
+  padding:32px 18px 24px;
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  text-align:center;
+}
+.bigprice{
+  font-size:54px;
+  font-weight:300;
+  margin:0 0 10px;
+  letter-spacing:.02em;
+}
+.bigprice b{
+  font-weight:800;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.oldline{
+  margin:0 0 16px;
+  color: rgba(255,255,255,.72);
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-size:12px;
+}
+.oldline s{opacity:.85}
+.btn2{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 22px;              /* менша */
+  min-width: 220px;               /* менша */
+  border-radius:999px;            /* овальна */
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-weight:800;
+  font-size:13px;
+  color:#fff;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  box-shadow: 0 18px 42px rgba(0,0,0,.42), 0 0 42px rgba(139,29,90,.20);
+  margin:10px 0 18px;
+  position:relative;
+  overflow:hidden;
+  transform: translateZ(0);
+  transition: transform .18s ease, filter .18s ease;
+}
+.btn2::before{
+  content:"";
+  position:absolute;
+  inset:-40% -140%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.55) 25%, transparent 55%);
+  transform: rotate(12deg);
+  opacity:.55;
+  animation: btnSheen 2.8s ease-in-out infinite;
+}
+.btn2::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(255,77,122,.30), rgba(0,0,0,0) 70%);
+  opacity:.55;
+  filter: blur(10px);
+}
+.btn2 > *{position:relative; z-index:1}
+@keyframes btnSheen{0%{transform:translateX(-45%) rotate(12deg)}50%{transform:translateX(28%) rotate(12deg)}100%{transform:translateX(115%) rotate(12deg)}}
+.btn2:hover{transform: translateY(-1px) scale(1.01); filter: brightness(1.05)}
+.btn2:active{transform: translateY(0) scale(.99); filter: brightness(0.98)}
+.label{color:#222;font-size:14px;margin:0 0 14px}
+.ps{margin-top:14px;color:rgba(255,255,255,.74);font-size:13px;line-height:1.5}
+
+/* Guarantee */
+.guarantee{background: var(--bg2); border-top:1px solid rgba(255,255,255,.06)}
+.gbox{
+  background: linear-gradient(90deg, rgba(139,29,90,.92), rgba(75,29,139,.92));
+  border-radius:16px;
+  padding:34px 22px;
+  max-width: 920px;
+  margin:0 auto;
+  box-shadow: var(--shadow);
+  color:#0b0b10;
+  position:relative;
+}
+.gbox::before{
+  content:"";
+  position:absolute;
+  left:18px; top:24px; bottom:24px;
+  width:2px;
+  background: rgba(0,0,0,.22);
+}
+.gbox h3{margin:0 0 8px;font-size:40px;font-weight:800;color:#0b0b10;padding-left:18px}
+.gbox .quote{font-size:74px;line-height:1;font-weight:800;color:rgba(0,0,0,.40);margin:8px 0 6px;padding-left:18px}
+.gbox p{margin:0 0 12px;font-size:16px;line-height:1.55;color:rgba(0,0,0,.75);padding-left:18px}
+
+/* FAQ */
+.faq{background: var(--bg2); border-top:1px solid rgba(255,255,255,.06)}
+.acc{max-width: 920px;margin:0 auto}
+.item{border-bottom:1px solid rgba(255,255,255,.10)}
+.q{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:18px 0;
+  cursor:pointer;
+  color: rgba(255,255,255,.90);
+  font-size:16px;
+  line-height:1.35;
+  user-select:none;
+}
+.q span{flex:1}
+.chev{
+  width:18px;height:18px;
+  border-right:2px solid rgba(255,255,255,.70);
+  border-bottom:2px solid rgba(255,255,255,.70);
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+  opacity:.9;
+  flex:0 0 18px;
+  margin-right: 6px;
+}
+.a{display:none;padding:0 0 16px;color: rgba(255,255,255,.78);font-size:14px;line-height:1.6}
+.item.open .a{display:block}
+.item.open .chev{transform: rotate(-135deg)}
+
+/* Footer */
+footer{background:#07070b;padding:54px 0 58px;color:rgba(255,255,255,.82)}
+.foot-name{font-size:40px;font-weight:300;margin:0 0 10px}
+.foot-line{font-size:18px;font-weight:300;margin:6px 0;opacity:.92}
+
+/* Sticky CTA */
+.sticky{
+  position:fixed;
+  left:16px; right:16px;
+  bottom:14px;
+  z-index:50;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-weight:800;
+  font-size:13px;
+  color:#fff;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  box-shadow: 0 18px 44px rgba(0,0,0,.50), 0 0 44px rgba(139,29,90,.20);
+  overflow:hidden;
+  transform: translateZ(0);
+}
+.sticky::before{
+  content:"";
+  position:absolute;
+  inset:-40% -140%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.50) 25%, transparent 55%);
+  transform: rotate(12deg);
+  opacity:.45;
+  animation: btnSheen 3.2s ease-in-out infinite;
+}
+.sticky > *{position:relative; z-index:1}
+
+/* Responsive */
+@media (max-width: 920px){
+  .author-grid{grid-template-columns:1fr}
+  .cards3{grid-template-columns:1fr;gap:14px}
+  .how-grid{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width: 820px){
+  :root{--stickyH: 88px}
+  .h1{font-size:36px}
+  .sub{font-size:18px}
+  .tbox{width:150px;height:110px}
+  .tbox .num{font-size:52px}
+  .tbox .lbl{font-size:20px}
+  .checks{font-size:16px}
+  .h2{font-size:34px}
+  .bigprice{font-size:46px}
+}
+@media (max-width: 420px){
+  .btn,.btn2{min-width: 240px}
+  .tbox{width:132px;height:105px}
+  .tbox .num{font-size:48px}
+  .tbox .lbl{font-size:18px}
+  .chat .txt{font-size:16px}
+}
+
+    /* Mobile: піднімаємо фон у hero, щоб обличчя було видно */
+    @media (max-width: 768px){
+      /* Mobile hero: окремий кроп, щоб обличчя було по центру */
+      .hero::before{background-image:url("./hero-mobile.jpg") !important; background-position:center center !important;}
+
+      .hero::before{background-position: center 12% !important;}
+
+      .hero::before{background-position: center 12% !important;}}
+    /* Very small screens */
+    @media (max-width: 380px){
+      /* v76 timer padding */
+      .timer{padding:0 10px !important;}
+
+      .hero::before{background-image:url("./hero-mobile.jpg") !important; background-position:center center !important;}
+
+      .hero::before{background-position: center 8% !important;}
+
+      .hero::before{background-position: center 8% !important;}
+    }
+
+
+    /* =========================
+       MOBILE OPTIMIZATION
+       ========================= */
+
+    /* Tablet & small laptops */
+    @media (max-width: 920px){
+      .wrap{padding:0 14px;}
+      .section{padding:54px 0;}
+      .title-center{font-size:34px;}
+      .h1{font-size:36px;}
+      .sub{font-size:18px;}
+      .checks{font-size:16px;}
+      .tbox{width:96px; height:88px;}
+      .tbox .num{font-size:36px;}
+      .tbox .lbl{font-size:13px;}
+      .slider{padding:0 50px 22px;}
+      .navbtn{width:40px;height:40px;font-size:20px;}
+      .step{gap:14px;}
+      .step .pic{width:78px;height:78px;flex:0 0 78px;}
+      .step li{font-size:18px;}
+      .buy .bigprice{font-size:48px;}
+      .gbox h3{font-size:38px;}
+      .foot-name{font-size:36px;}
+      .foot-line{font-size:18px;}
+    }
+
+    /* Mobile */
+    @media (max-width: 768px){
+      /* Mobile hero: окремий кроп, щоб обличчя було по центру */
+      .hero::before{background-image:url("./hero-mobile.jpg") !important; background-position:center center !important;}
+
+      .hero::before{background-position: center 12% !important;}
+
+      :root{--stickyH: 84px;}
+      body{padding-bottom: var(--stickyH);}
+      .hero{min-height:auto; padding:56px 0 38px;}
+      .topline{font-size:12px;}
+      .h1{font-size:28px; margin:18px 0 10px;}
+      .sub{font-size:16px; margin-bottom:14px;}
+      .price{font-size:clamp(12px, 3.7vw, 15px); letter-spacing:.02em; margin:14px 0; white-space:normal;}
+      .price .now{font-size:1.45em; padding:3px 10px;}
+      .btn{min-width:0; width:auto; padding:14px 20px; max-width:92vw;}
+      .btn .check{width:30px;height:30px;}
+      .timer{gap:10px; margin-top:18px; flex-wrap:nowrap;}
+      .tbox{width:96px; height:88px;}
+      .tbox .num{font-size:36px;}
+      .tbox .lbl{font-size:13px;}
+      .checks{font-size:15px; line-height:1.45;}
+      .tick{width:22px;height:22px;flex:0 0 22px; border-radius:6px;}
+      .section{padding:44px 0;}
+      .title-center{font-size:26px; margin-bottom:16px;}
+      .hint{font-size:14px; margin-bottom:18px;}
+      .teal-card{padding:20px 16px;}
+      .teal-card p{font-size:16px; line-height:1.5;}
+
+      /* Reviews */
+      .slider{padding:0 46px 18px;}
+      .navbtn{width:38px;height:38px;font-size:20px;}
+      .frame{padding:12px;}
+      .chat{padding:14px 14px;}
+      .chat img{width:38px;height:38px;flex:0 0 38px;}
+      .chat .txt{font-size:16px;}
+      .chat .like{width:30px;height:30px;}
+      .dots{gap:10px; margin-top:14px;}
+
+      /* Program steps: stack */
+      .program-bg{padding:28px 0 6px;}
+      .step{flex-direction:column; align-items:flex-start; padding:18px 16px;}
+      .step .pic{width:68px;height:68px;flex:0 0 68px;}
+      .step .krok{font-size:16px;}
+      .step li{font-size:16px; line-height:1.35;}
+      .step ul{padding-left:18px;}
+
+      /* Benefits cards */
+      .benefit-card{padding:20px 16px;}
+      .benefit-card .circ{width:74px;height:74px;}
+      .benefit-card p{font-size:16px;}
+
+      /* Buy section */
+      .buy{padding:54px 0 56px;}
+      .buy-card{padding:26px 16px 20px;}
+      .buy .bigprice{font-size:42px;}
+      .buy .btn2{min-width:auto; width:auto; padding:14px 22px;}
+      .buy .label{font-size:16px;}
+      .buy .ps{font-size:13px;}
+
+      /* Guarantee */
+      .gbox{padding:26px 16px;}
+      .gbox h3{font-size:30px;}
+      .gbox .quote{font-size:56px;}
+      .gbox p{font-size:16px; padding-left: 16px;}
+      .gbox h3, .gbox .quote{padding-left:16px;}
+      .gbox::before{left:14px;}
+
+      /* FAQ */
+      .q{font-size:15px; padding:14px 0;}
+      .a{font-size:14px;}
+      .chev{width:16px;height:16px;}
+
+      /* Footer + sticky */
+      footer{padding:44px 0 48px;}
+      .foot-name{font-size:30px;}
+      .foot-line{font-size:16px;}
+      .sticky{height: var(--stickyH); font-size:18px; letter-spacing:.05em;}
+      .sticky{padding:0 14px; text-align:center;}
+    }
+
+    /* Very small screens */
+    @media (max-width: 380px){
+      .hero::before{background-image:url("./hero-mobile.jpg") !important; background-position:center center !important;}
+
+      .hero::before{background-position: center 8% !important;}
+
+      .h1{font-size:25px;}
+      .tbox{width:96px; height:88px;}
+      .tbox .num{font-size:36px;}
+      .chat .txt{font-size:15px;}
+      .buy .bigprice{font-size:38px;}
+      .sticky{font-size:16px;}
+    }
+
+
+    /* ===== Mini footer links ===== */
+    .mini-links{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      padding:16px 0 0;
+      opacity:.78;
+      font-size:12px;
+      letter-spacing:.02em;
+    }
+    .mini-link{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: rgba(255,255,255,.88);
+    }
+    .mini-sep{opacity:.55}
+
+    /* ===== Modal (overlay) ===== */
+    .modal-overlay{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+      z-index: 10000;
+    }
+    .modal-overlay.open{display:flex}
+    .modal{
+      width: min(560px, 100%);
+      max-height: 90vh;
+      background:
+        radial-gradient(900px 520px at 10% 0%, rgba(107,44,255,.14), transparent 55%),
+        radial-gradient(900px 520px at 90% 15%, rgba(178,27,106,.10), transparent 55%),
+        #ffffff;
+      color:#12121a;
+      border-radius: 18px;
+      border: 1px solid rgba(20,20,34,.10);
+      box-shadow: 0 28px 80px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+    }
+    .modal-body{
+      padding: 70px 18px 20px;
+      overflow:auto;
+      max-height: 90vh;
+    }
+    .modal-close{
+      position:absolute; right:12px; top:12px;
+      width:42px; height:42px;
+      border:1px solid rgba(20,20,34,.12);
+      border-radius:999px;
+      background: rgba(20,20,34,.04);
+      color:#12121a;
+      font-size:28px;
+      line-height:40px;
+      cursor:pointer;
+      backdrop-filter: blur(6px);
+    }
+    .modal-close:hover{filter: brightness(1.06); background: rgba(255,255,255,.14);}
+    .modal-close:active{transform: translateY(1px);}
+/* ===== Purchase popup (premium) ===== */
+    .p-title{
+      font-size:14px;
+      line-height:1.5;
+      font-weight:600;
+      margin:10px 0 12px;
+      text-align:center;
+      color: rgba(255,255,255,.92);
+    }
+
+    .p-price{
+      text-align:center;
+      margin: 10px 0 18px;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+    .p-price .new{
+      font-weight:900;
+      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size:20px;
+    }
+    .p-price .old{
+      text-decoration: line-through;
+      color: rgba(255,255,255,.55);
+      font-weight:700;
+      margin-left:10px;
+    }
+    .p-label{
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin: 12px 0 8px;
+      color: rgba(255,255,255,.78);
+    }
+    .p-input{
+      width:100%;
+      padding:14px 12px;
+      border:1px solid rgba(20,20,34,.12);
+      background: rgba(20,20,34,.05);
+      border-radius: 12px;
+      font-size:16px;
+      color:#12121a;
+      outline:none;
+      transition: border-color .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    .p-input:focus{
+      background: rgba(107,44,255,.06);
+      border-color: rgba(107,44,255,.45);
+      box-shadow: 0 0 0 4px rgba(107,44,255,.14);
+    }
+    .p-input::placeholder{color: rgba(255,255,255,.45);}
+    .p-input:focus{
+      border-color: rgba(107,44,255,.65);
+      background: rgba(255,255,255,.10);
+      box-shadow: 0 0 0 4px rgba(107,44,255,.14);
+    }
+
+    .p-lock{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      margin-top:16px;
+      color: rgba(255,255,255,.72);
+      font-size:13px;
+      opacity:.95;
+    }
+    .p-lock svg{width:18px;height:18px; flex:0 0 18px; margin-top:2px}
+    .p-lock svg path{stroke: rgba(255,255,255,.85);}
+
+    .p-tbox::before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(107,44,255,.55), rgba(178,27,106,.45));
+      opacity:.55;
+      z-index:0;
+    }
+    .p-tbox::after{
+      content:"";
+      position:absolute; inset:1px;
+      border-radius: 11px;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.70));
+      z-index:1;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.55);
+    }
+    /* CTA button in popup */
+    
+    .p-btn:active::before{animation-play-state: paused;}
+/* Main hero timer: one row on mobile */
+    @media (max-width: 768px){
+      .timer{flex-wrap:nowrap !important; justify-content:space-between !important; padding:0 14px !important; box-sizing:border-box !important;}
+      .tbox{flex:1 !important; width:auto !important; min-width: 92px; height:92px !important;}
+      .tbox .num{font-size:40px !important;}
+      .tbox .lbl{font-size:14px !important;}
+    }
+    @media (max-width: 380px){
+      .timer{padding: 0 10px !important;}
+      .tbox{min-width: 86px; height:88px !important;}
+      .tbox .num{font-size:36px !important;}
+      .tbox .lbl{font-size:13px !important;}
+    }
+
+
+    
+    /* Price pill (light modal) */
+    .p-price{margin: 10px 0 16px; text-align:center;}
+    .p-price .pill{
+      display:inline-flex;
+      gap:12px;
+      align-items:baseline;
+      padding:10px 14px;
+      border-radius: 999px;
+      background: rgba(20,20,34,.04);
+      border: 1px solid rgba(20,20,34,.10);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.55);
+    }
+    .p-price .pill .n{
+      font-size:20px;
+      font-weight:900;
+      letter-spacing:.02em;
+      color:#cc2c2c; /* red main price */
+    }
+    .p-price .pill .o{
+      font-size:14px;
+      font-weight:800;
+      opacity:.62;
+      text-decoration: line-through;
+      color: rgba(20,20,34,.80);
+    }
+
+
+    .p-title{color:#12121a;}
+    .p-label{color: rgba(20,20,34,.90);}
+    .p-lock{color: rgba(20,20,34,.72);}
+
+
+    
+    
+    /* Ultra-premium CTA button (light modal) — bright fill + premium motion */
+    100%{transform: rotate(360deg);}
+    }
+    18%{opacity:.60;}
+      40%{opacity:.20;}
+      100%{transform: translateX(160%) rotate(14deg); opacity:0;}
+    }
+    50%{box-shadow: 0 28px 68px rgba(178,27,106,.26), 0 14px 32px rgba(0,0,0,.16);}
+    }
+    /* Animated premium ring (gives separation from modal surface) */
+    /* Inner bright premium fill */
+    /* Metallic sheen */
+    50%{transform: translateY(-1px); box-shadow: 0 16px 30px rgba(0,0,0,.12);}
+    }
+    .p-tbox{animation: timerPulse 2.8s ease-in-out infinite;}
+
+
+    /* Make lock icon visible before confidentiality text */
+    .p-lock svg{
+      width:18px; height:18px;
+      flex:0 0 18px;
+      margin-top:2px;
+      padding:8px;
+      border-radius: 12px;
+      background: rgba(20,20,34,.06);
+      border: 1px solid rgba(20,20,34,.12);
+      box-sizing: content-box;
+    }
+    .p-lock svg path{stroke:#12121a !important;}
+
+
+    .p-tbox .num{font-size:30px;}
+      .p-tbox .lbl{font-size:11px;}
+    }
+
+
+    .p-tbox .num{font-size:30px;}
+      .p-tbox .lbl{font-size:11px;}
+    }
+
+
+    /* =========================
+       POPUP: Premium CTA + Timer (v3)
+       Насичена глянцева преміум-стилістика
+       ========================= */
+
+    /* CTA button: vivid fill (same palette as site) + glossy specular highlight + animated sheen */
+    @keyframes pBtnGlow{
+      0%,100%{box-shadow: 0 20px 46px rgba(107,44,255,.28), 0 18px 42px rgba(178,27,106,.18);}
+      50%{box-shadow: 0 28px 70px rgba(178,27,106,.24), 0 22px 52px rgba(107,44,255,.20);}
+    }
+    @keyframes pBtnSheen{
+      0%{transform: translateX(-160%) skewX(-18deg); opacity:0;}
+      18%{opacity:.75;}
+      40%{opacity:.22;}
+      100%{transform: translateX(160%) skewX(-18deg); opacity:0;}
+    }
+    .p-btn{
+      width:100%;
+      position:relative;
+      border:0;
+      padding:18px 16px;
+      margin-top:18px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      cursor:pointer;
+      border-radius: 16px;
+      color:#fff;
+
+      /* vivid brand fill (matches site buttons) */
+      background:
+        radial-gradient(900px 260px at 25% 0%, rgba(255,255,255,.34), transparent 58%),
+        linear-gradient(90deg, var(--accent2), var(--accent));
+      box-shadow: 0 22px 54px rgba(107,44,255,.22), 0 18px 44px rgba(178,27,106,.18);
+      overflow:hidden;
+
+      /* premium depth */
+      box-shadow:
+        0 22px 54px rgba(107,44,255,.22),
+        0 18px 44px rgba(178,27,106,.18),
+        inset 0 1px 0 rgba(255,255,255,.30),
+        inset 0 -10px 18px rgba(0,0,0,.14);
+
+      animation: pBtnGlow 2.4s ease-in-out infinite;
+      transition: transform .10s ease, filter .12s ease;
+      filter: saturate(1.75) contrast(1.06) brightness(1.10);
+    }
+    /* glossy top "lacquer" line */
+    .p-btn::before{
+      content:"";
+      position:absolute;
+      left:10px; right:10px; top:9px;
+      height:38%;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));
+      opacity:.55;
+      z-index:1;
+      pointer-events:none;
+      mix-blend-mode: soft-light;
+    }
+    /* moving sheen */
+    .p-btn::after{
+      content:"";
+      position:absolute;
+      top:-45%;
+      left:-60%;
+      width:58%;
+      height:220%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.95), transparent);
+      transform: translateX(-160%) skewX(-18deg);
+      opacity:0;
+      animation: pBtnSheen 2.6s ease-in-out infinite;
+      z-index:2;
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+    .p-btn span{position:relative; z-index:3;}
+    .p-btn:hover{
+      transform: translateY(-1px);
+      filter: saturate(1.9) contrast(1.08) brightness(1.13);
+    }
+    .p-btn:active{transform: translateY(1px); animation-play-state: paused;}
+    .p-btn[disabled]{
+      opacity:.55;
+      cursor:not-allowed;
+      animation:none;
+      filter: grayscale(.10) saturate(.95) brightness(1.02);
+      box-shadow: 0 12px 26px rgba(0,0,0,.10);
+    }
+
+    /* Timer: glossy premium cards with vivid accents + animated light sweep */
+    @keyframes pTimerSweep{
+      0%{transform: translateX(-160%) skewX(-16deg); opacity:0;}
+      20%{opacity:.55;}
+      45%{opacity:.18;}
+      100%{transform: translateX(160%) skewX(-16deg); opacity:0;}
+    }
+    @keyframes pTimerGlow{
+      0%,100%{box-shadow: 0 14px 26px rgba(0,0,0,.10);}
+      50%{box-shadow: 0 22px 46px rgba(107,44,255,.16);}
+    }
+    .p-timer{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:16px;
+    }
+    .p-tbox{
+      flex:1;
+      position:relative;
+      border-radius: 16px;
+      height: 94px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+
+      background:
+        radial-gradient(900px 240px at 18% 0%, rgba(107,44,255,.16), transparent 60%),
+        radial-gradient(900px 240px at 82% 0%, rgba(178,27,106,.12), transparent 60%),
+        linear-gradient(180deg, #ffffff, rgba(20,20,34,.035));
+      border: 1px solid rgba(20,20,34,.10);
+
+      box-shadow:
+        0 18px 40px rgba(0,0,0,.10),
+        inset 0 1px 0 rgba(255,255,255,.72),
+        inset 0 -10px 18px rgba(0,0,0,.05);
+
+      animation: pTimerGlow 2.8s ease-in-out infinite;
+    }
+    /* glossy highlight band */
+    .p-tbox::before{
+      content:"";
+      position:absolute;
+      left:10px; right:10px; top:9px;
+      height:40%;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.70), rgba(255,255,255,0));
+      opacity:.55;
+      pointer-events:none;
+      mix-blend-mode: soft-light;
+    }
+    /* moving sweep */
+    .p-tbox::after{
+      content:"";
+      position:absolute;
+      top:-40%;
+      left:-60%;
+      width:58%;
+      height:200%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.95), transparent);
+      transform: translateX(-160%) skewX(-16deg);
+      opacity:0;
+      animation: pTimerSweep 3.0s ease-in-out infinite;
+      mix-blend-mode: screen;
+    }
+
+    .p-tbox .num{
+      position:relative;
+      z-index:2;
+      font-size:34px;
+      font-weight:950;
+      line-height:1;
+      letter-spacing:.02em;
+      color:#12121a;
+      text-shadow: 0 1px 0 rgba(255,255,255,.65);
+    }
+    .p-tbox .lbl{
+      position:relative;
+      z-index:2;
+      font-size:12px;
+      font-weight:850;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      opacity:.82;
+      margin-top:6px;
+      color: rgba(20,20,34,.82);
+    }
+
+    @media (max-width: 420px){
+      .p-tbox{height:90px;}
+      .p-tbox .num{font-size:30px;}
+      .p-tbox .lbl{font-size:11px;}
+    }
+
+/* === TOPBAR TWEAKS: менший текст + більший відступ + бейдж старту === */
+.hero-topline{
+  font-size: 12px;
+  letter-spacing: .10em;
+}
+.hero-topline--sub{
+  font-size: 11px;
+  letter-spacing: .14em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(210, 110, 170, 0.78);
+  background: rgba(0,0,0,0.30);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.hero-date{
+  color: #ff3d7f;
+  font-weight: 800;
+}
+
+/* Більший відступ від верхнього напису до основного тексту Hero */
+.hero .wrap{
+  padding-top: 112px;
+}
+
+@media (min-width: 900px){
+  .hero-topline{ font-size: 13px; }
+  .hero-topline--sub{ font-size: 12px; padding: 9px 14px; }
+  .hero .wrap{ padding-top: 104px; }
+}
+
+@media (max-width: 420px){
+  .hero-topbar{ top: 12px; }
+  .hero-topline{ font-size: 11px; }
+  .hero-topline--sub{ font-size: 10px; padding: 7px 10px; }
+  .hero .wrap{ padding-top: 128px; }
+}
+
+
+}
+
+
+  .h1 .h1-tagline{ margin-top: 10px; font-size: 13px; }
+  p.sub{ margin-top: 14px; font-size: 12.5px; padding: 9px 11px; }
+}
+
+
+  .h1 .h1-tagline{ margin-top: 12px; font-size: 14px; }
+  p.sub{ margin-top: 16px; font-size: 12.5px; padding: 9px 11px; }
+}
+
+
+  .h1 .h1-title::after{ height: 4px; width: min(360px, 92%); }
+  .h1 .h1-tagline{ font-size: 15px; }
+  .h1 .h1-tagline::after{ height: 3px; width: min(280px, 86%); }
+  p.sub{ font-size: 12.5px; padding: 9px 11px; }
+}
+
+
+.h1 .h1-title::before{ inset: -6px -8px; }
+  .h1 .h1-tagline{ font-size: 15px; padding: 7px 12px; }
+  p.sub{ font-size: 12.5px; padding: 9px 11px; }
+}
+
+
+.h1::before{ inset: -16px -18px; filter: blur(16px) saturate(1.08); }
+  .h1 .h1-title{ font-size: 26px; }
+  .h1 .h1-tagline{ font-size: 15px; margin-top: 12px; }
+  p.sub{ font-size: 12.5px; padding: 9px 11px; }
+}
+
+
+/* === Hero: преміальні шрифти + ОДНА “фламастерна” підложка під 2 тексти (анімація, дуже м'яко) === */
+:root{
+  --acc-pink: rgba(255, 77, 109, 1);
+  --acc-purple: rgba(141, 65, 255, 1);
+  --acc-rose: rgba(210, 110, 170, 1);
+}
+
+@keyframes glowSlide{
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sheenWide{
+  0%   { transform: translateX(-140%) skewX(-18deg); opacity: 0; }
+  10%  { opacity: 0.22; }
+  32%  { opacity: 0; }
+  100% { transform: translateX(140%) skewX(-18deg); opacity: 0; }
+}
+
+/* Контейнер заголовка + підзаголовка */
+.h1{
+  margin-top: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+
+  position: relative;
+  display: inline-block;
+  max-width: min(760px, 94vw);
+  padding: 18px 18px 16px;
+  border-radius: 28px;
+  isolation: isolate;
+}
+
+/* ОДНА підложка під обидва тексти — прозора, “затушована фламастером” (без чітких меж) */
+.h1::before{
+  content: '';
+  position: absolute;
+  inset: -22px -26px;
+  border-radius: 52px;
+
+  /* 1) м'який базовий тон */
+  background:
+    radial-gradient(120% 120% at 12% 18%,
+      rgba(255,77,109,0.12) 0%,
+      rgba(141,65,255,0.10) 42%,
+      rgba(210,110,170,0.09) 68%,
+      rgba(0,0,0,0.00) 100%
+    ),
+    radial-gradient(120% 120% at 86% 62%,
+      rgba(141,65,255,0.09) 0%,
+      rgba(255,77,109,0.08) 45%,
+      rgba(0,0,0,0.00) 100%
+    ),
+    /* 2) "штрихи фломастером" — дуже делікатно */
+    repeating-linear-gradient( -14deg,
+      rgba(255,77,109,0.06) 0 14px,
+      rgba(141,65,255,0.05) 14px 28px,
+      rgba(210,110,170,0.055) 28px 42px
+    ),
+    /* 3) загальний перелив */
+    linear-gradient(120deg,
+      rgba(255,77,109,0.07) 0%,
+      rgba(141,65,255,0.07) 45%,
+      rgba(210,110,170,0.07) 85%,
+      rgba(255,77,109,0.06) 100%
+    );
+
+  background-size: 240% 240%;
+  animation: glowSlide 10s ease-in-out infinite;
+
+  /* ключ: сильніший blur, щоб не було країв */
+  filter: blur(28px) saturate(1.05);
+  opacity: 0.92;
+  z-index: -1;
+}
+
+/* Дуже м'який глянець поверх — без різких ліній */
+.h1::after{
+  content: '';
+  position: absolute;
+  top: -34px;
+  bottom: -34px;
+  left: 0;
+  width: 58%;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.00),
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.00)
+  );
+  filter: blur(14px);
+  z-index: -1;
+  animation: sheenWide 7.2s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+/* Заголовок — ПК: в один рядок */
+.h1 .h1-title{
+  display: block;
+  margin: 0;
+  font-family: 'Playfair Display', 'Montserrat', serif;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  line-height: 1.06;
+
+  white-space: nowrap;        /* desktop: один рядок */
+  font-size: clamp(30px, 4.2vw, 62px);
+  text-shadow: 0 18px 52px rgba(0,0,0,0.55);
+}
+.h1 .h1-title .t1,
+.h1 .h1-title .t2{
+  display: inline;
+}
+
+/* Підзаголовок */
+.h1 .h1-tagline{
+  display: block;
+  margin-top: 14px;
+
+  font-family: 'Italiana', 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.18;
+
+  font-size: clamp(16px, 2.1vw, 28px);
+  text-shadow: 0 14px 34px rgba(0,0,0,0.42);
+}
+
+/* Третій текст — виділений “badge” */
+p.sub{
+  margin-top: 18px;
+  font-family: 'Manrope', 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  line-height: 1.28;
+  font-size: clamp(13px, 1.35vw, 18px);
+
+  display: inline-block;
+  max-width: min(560px, 92vw);
+  padding: 10px 12px;
+  border-radius: 16px;
+
+  background: rgba(15, 15, 18, 0.38);
+  border: 1px solid rgba(210, 110, 170, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.35);
+}
+
+/* МОБІЛЬНА: заголовок у 2 рядки, ширина майже “від краю до краю” */
+@media (max-width: 768px){
+  .h1{
+    display: block;
+    width: calc(100vw - 18px);
+    max-width: none;
+    padding: 16px 10px 14px;  /* менше бокових відступів */
+    border-radius: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h1::before{
+    inset: -24px -18px;
+    filter: blur(30px) saturate(1.05);
+    opacity: 0.90;
+  }
+  .h1 .h1-title{
+    white-space: normal;               /* дозволяємо 2 рядки */
+    text-wrap: balance;
+    font-size: clamp(34px, 10.2vw, 44px);
+    line-height: 1.02;
+    letter-spacing: 0.005em;
+  }
+  .h1 .h1-title .t1,
+  .h1 .h1-title .t2{
+    display: block;                    /* 2 рядки гарантовано */
+  }
+  .h1 .h1-title .t2{ margin-top: 2px; }
+
+  .h1 .h1-tagline{
+    font-size: clamp(15px, 4.6vw, 20px);
+    margin-top: 12px;
+  }
+
+  p.sub{
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+}
+
+@media (max-width: 360px){
+  .h1 .h1-title{ font-size: 32px; }
+}
+
+
+}
+
+
+}
+
+
+}
+
+
+/* === v61: HERO заголовок рівно 2 рядки на мобільній (без розбиття “трендових плетінь”) === */
+.h1 .h1-title{ text-transform: none !important; }
+
+@media (max-width: 768px){
+  .h1 .h1-title{
+    padding: 0 8px !important;
+    box-sizing: border-box;
+    white-space: normal !important;
+    width: 100%;
+    font-size: clamp(32px, 9.8vw, 44px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.006em !important;
+  }
+  .h1 .h1-title .t1{ display:block !important; }
+  .h1 .h1-title .t2{
+    display:block !important;
+    white-space: nowrap !important;   /* забороняємо перенос на 3-й рядок */
+    font-size: 0.89em !important;     /* трохи менше, щоб влізло “трендових плетінь” */
+    letter-spacing: -0.004em !important;
+    margin-top: 6px !important;
+  }
+}
+
+@media (max-width: 390px){
+  .h1 .h1-title{ font-size: 32px !important; }
+  .h1 .h1-title .t2{ font-size: 0.86em !important; }
+}
+
+@media (max-width: 360px){
+  .h1 .h1-title{ font-size: 30px !important; }
+  .h1 .h1-title .t2{ font-size: 0.86em !important; }
+}
+
+
+/* === v63: Мобільна — 2 рядки ОДНАКОВОГО розміру, адаптивно під ширину === */
+@media (max-width: 768px){
+  .h1 .h1-title{
+    /* один розмір для обох рядків */
+    font-size: clamp(30px, 9.7vw, 44px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.006em !important;
+    padding: 0 10px !important;
+    box-sizing: border-box;
+
+    white-space: normal !important;
+    width: 100%;
+    text-wrap: balance;
+  }
+
+  .h1 .h1-title .t1,
+  .h1 .h1-title .t2{
+    display: block !important;
+    font-size: 1em !important;     /* ОДНАКОВИЙ розмір */
+    margin: 0 !important;
+  }
+
+  .h1 .h1-title .t2{
+    white-space: nowrap !important; /* “трендових плетінь” не розбиваємо */
+    margin-top: 6px !important;
+  }
+}
+
+/* дуже вузькі екрани — ще трішки піджимаємо, але ОБИДВА рядки однаково */
+@media (max-width: 390px){
+  .h1 .h1-title{ font-size: clamp(28px, 9.4vw, 40px) !important; }
+}
+@media (max-width: 360px){
+  .h1 .h1-title{ font-size: clamp(26px, 9.2vw, 38px) !important; }
+}
+
+
+/* === v64: Мобільна — заголовок 2 рядки, ОБИДВА однакового розміру, без обрізання справа === */
+@media (max-width: 768px){
+  .hero .h1{ width:100%; max-width: 100%; }
+}
+@media (max-width: 768px){
+  .hero .h1 .h1-title{
+    font-size: clamp(26px, 8.6vw, 40px) !important; /* ↓ щоб “плетінь” вміщалося */
+    line-height: 0.98 !important;
+    letter-spacing: -0.012em !important;           /* трохи стискаємо */
+    padding: 0 12px !important;                    /* “від поля до поля”, але без обрізання */
+    box-sizing: border-box;
+
+    width: 100% !important;
+    white-space: normal !important;
+    text-wrap: balance;
+  }
+  .hero .h1 .h1-title .t1,
+  .hero .h1 .h1-title .t2{
+    display:block !important;
+    font-size: 1em !important;                     /* ОДНАКОВИЙ розмір */
+    margin: 0 !important;
+  }
+  .hero .h1 .h1-title .t2{
+    white-space: nowrap !important;                /* не даємо 3-й рядок */
+    margin-top: 6px !important;
+  }
+}
+
+@media (max-width: 390px){
+  .hero .h1 .h1-title{ font-size: clamp(24px, 8.2vw, 36px) !important; padding: 0 10px !important; }
+}
+@media (max-width: 360px){
+  .hero .h1 .h1-title{ font-size: clamp(23px, 8.0vw, 34px) !important; padding: 0 10px !important; }
+}
+
+
+/* === v65: Мобільна — заголовок по центру + авто-підгонка, щоб текст не обрізався === */
+@media (max-width: 768px){
+  .hero .h1 .h1-title{
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    /* стартове значення (JS може ще піджати, якщо треба) */
+    font-size: calc(clamp(24px, 8.3vw, 38px) - 2px) !important;
+    letter-spacing: -0.010em !important;
+    padding: 0 14px !important;
+    box-sizing: border-box;
+  }
+  .hero .h1 .h1-title .t2{
+    white-space: nowrap !important; /* “трендових плетінь” — одним рядком */
+  }
+}
+
+
+/* === v67: Адаптація заголовка для МОБІЛЬНОГО перегляду (до 768px) === */
+@media (max-width: 768px){
+  .hero .h1 .h1-title{
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    /* базове адаптивне значення */
+    font-size: calc(clamp(24px, 7.8vw, 40px) - 2px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.010em !important;
+
+    width: 100% !important;
+    padding: 0 14px !important;
+    box-sizing: border-box;
+
+    white-space: normal !important;
+    text-wrap: balance;
+  }
+
+  .hero .h1 .h1-title .t1,
+  .hero .h1 .h1-title .t2{
+    display: block !important;
+    font-size: 1em !important;   /* обидва рядки одного розміру */
+    margin: 0 !important;
+  }
+
+  .hero .h1 .h1-title .t2{
+    margin-top: 6px !important;
+    white-space: nowrap !important; /* “трендових плетінь” — без 3-го рядка */
+  }
+}
+
+/* Дуже вузькі екрани — ще трішки піджимаємо, але без обрізання */
+@media (max-width: 390px){
+  .hero .h1 .h1-title{
+    font-size: calc(clamp(23px, 8.3vw, 36px) - 2px) !important;
+    padding: 0 12px !important;
+  }
+}
+@media (max-width: 360px){
+  .hero .h1 .h1-title{
+    font-size: calc(clamp(22px, 8.4vw, 34px) - 2px) !important;
+    padding: 0 12px !important;
+  }
+}
+
+
+/* === v70: ціна у 2 рядки + 890 грн максимально помітно === */
+.price{ text-align:center; line-height:1.15; }
+.price-line1{ font-weight:700; font-size:0.98em; }
+.price-line2{ margin-top:8px; font-size:0.92em; opacity:.92; }
+
+@keyframes pricePulse{
+  0%{ transform: translateZ(0) scale(1); filter: brightness(1); }
+  50%{ transform: translateZ(0) scale(1.04); filter: brightness(1.08); }
+  100%{ transform: translateZ(0) scale(1); filter: brightness(1); }
+}
+.price .now{
+  animation: pricePulse 2.2s ease-in-out infinite;
+}
+
+@media (max-width: 560px){
+  .price{ font-size:16px; }
+  .price .now{ font-size:1.55em; }
+}
+
+/* === v74: постійна анімація «натиск» (лише для кнопки ПРИЄДНАТИСЯ у Hero) === */
+@keyframes btnPressLoop{
+  0%,100%{ transform: translateY(0) scale(1); filter: brightness(1); }
+  40%{ transform: translateY(1px) scale(.985); filter: brightness(1.06); }
+  70%{ transform: translateY(-1px) scale(1.008); filter: brightness(1.02); }
+}
+.btn[data-open="purchase"]{
+  animation: btnPressLoop 2.15s ease-in-out infinite;
+  will-change: transform, filter;
+}
+/* на ховер/натиск зупиняємо цикл, щоб стан був контрольований */
+.btn[data-open="purchase"]:hover,
+.btn[data-open="purchase"]:active,
+.btn[data-open="purchase"].is-pressed{
+  animation-play-state: paused;
+}
+
+
+/* === v77: адаптація чек-листа під таймером для мобільних === */
+@media (max-width: 768px){
+  .checks{
+    padding: 0 14px;            /* відступи від країв */
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 1.45;
+    max-width: 640px;           /* щоб читалось на мобільних */
+  }
+  .checks li{
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .tick{
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    border-radius: 6px;
+    margin-top: 1px;
+  }
+}
+
+@media (max-width: 420px){
+  .checks{
+    padding: 0 12px;
+    font-size: 14px;
+  }
+  .checks li{ margin: 10px 0; }
+  .tick{ width: 21px; height: 21px; flex-basis: 21px; }
+}
+
+
+/* === v85: плавний перехід hero -> 2-й блок (без видимого стику) === */
+.hero{ background: var(--bg2); } /* колір підкладки = колір 2-го блоку */
+
+.section.author{
+  background: var(--bg2);
+  position: relative;
+}
+
+/* мікро-бленд на стику (прибирає “лінію” на деяких екранах) */
+.section.author::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:-1px;
+  height:56px;
+  background: linear-gradient(180deg, rgba(15,15,23,1) 0%, rgba(15,15,23,0) 100%);
+  pointer-events:none;
+}
+
+
+/* === v87: преміальна плашка "подарунок" під таймером + анімований стікер === */
+.bonus-card{
+  margin: 14px auto 6px;
+  padding: 14px 14px 14px 12px;
+  /* mobile fix: prevent overflow when side-margins are used */
+  width: min(720px, calc(100% - 28px));
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,77,122,.12), rgba(123,43,255,.10), rgba(255,209,166,.06));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 42px rgba(0,0,0,.40);
+  position: relative;
+  overflow: hidden;
+}
+
+.bonus-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background: linear-gradient(120deg, rgba(255,77,122,.0), rgba(255,77,122,.26), rgba(123,43,255,.26), rgba(255,209,166,.16), rgba(255,77,122,.0));
+  filter: blur(10px);
+  opacity: .75;
+  transform: translateX(-18%);
+  animation: none;
+  pointer-events:none;
+}
+.bonus-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(120% 140% at 30% 25%, rgba(255,255,255,.10), rgba(255,255,255,0) 55%);
+  pointer-events:none;
+}
+
+@keyframes bonusGlow{
+  0%{ transform: translateX(-22%); opacity:.55; }
+  50%{ transform: translateX(10%); opacity:.85; }
+  100%{ transform: translateX(-22%); opacity:.55; }
+}
+
+.bonus-sticker{
+  width: 88px;
+  height: 88px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.gift-svg{
+  width: 88px;
+  height: 88px;
+  transform: translateZ(0);
+  animation: none;
+}
+.gift-svg .spark{
+  transform-origin: 110px 110px;
+  animation: none;
+}
+.gift-svg .bow{
+  transform-origin: 110px 86px;
+  animation: none;
+}
+
+@keyframes giftFloat{
+  0%{ transform: translateY(0) rotate(-2deg) scale(1); filter: saturate(1.05); }
+  50%{ transform: translateY(-6px) rotate(2deg) scale(1.02); filter: saturate(1.18); }
+  100%{ transform: translateY(0) rotate(-2deg) scale(1); filter: saturate(1.05); }
+}
+@keyframes sparkTwinkle{
+  0%,100%{ opacity:.55; }
+  50%{ opacity:1; }
+}
+@keyframes bowPulse{
+  0%,100%{ transform: scale(1); }
+  50%{ transform: scale(1.06); }
+}
+
+.bonus-content{ position: relative; z-index: 1; }
+.bonus-title{
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 15px;
+  line-height: 1.25;
+  color: rgba(255,255,255,.96);
+}
+.bonus-items{
+  margin-top: 8px;
+  display: grid;
+  gap: 7px;
+  font-size: 13.5px;
+  line-height: 1.3;
+  color: rgba(255,255,255,.88);
+}
+.bonus-item{ display:flex; gap:10px; align-items:flex-start; }
+.b-dot{
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,77,122,1), rgba(123,43,255,1));
+  box-shadow: 0 0 16px rgba(255,77,122,.38), 0 0 22px rgba(123,43,255,.30);
+  flex: 0 0 10px;
+}
+
+
+.b-ic{
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 8px;
+  flex: 0 0 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 0 18px rgba(255,77,122,.16), 0 0 18px rgba(123,43,255,.14);
+}
+.b-ic svg{
+  width: 14px;
+  height: 14px;
+  stroke: rgba(255,255,255,.92);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.b-ic--tg svg{ stroke-width: 2.2; }
+
+@media (max-width: 768px){
+  .bonus-card{
+    margin: 12px 14px 6px;
+    grid-template-columns: 78px 1fr;
+    padding: 12px 12px 12px 10px;
+    border-radius: 16px;
+  }
+  .bonus-sticker{ width:78px; height:78px; }
+  .gift-svg{ width:78px; height:78px; }
+  .bonus-title{ font-size: 14.5px; }
+  .bonus-items{ font-size: 13.5px; }
+}
+@media (max-width: 420px){
+  .bonus-card{ margin: 12px 12px 6px; grid-template-columns: 70px 1fr; }
+  .bonus-sticker{ width:70px; height:70px; }
+  .gift-svg{ width:70px; height:70px; }
+  .bonus-title{ font-size: 14px; }
+  .bonus-items{ font-size: 13px; }
+}
+
+
+/* === v88: бонус-плашка — мобільна адаптація + преміальна підсвітка периметра + виразніший стікер === */
+.bonus-card{
+  margin-top: 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 22px 62px rgba(0,0,0,.50), 0 0 0 1px rgba(255,255,255,.06) inset, 0 0 34px rgba(255,77,122,.12), 0 0 30px rgba(123,43,255,.10);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Периметр (м'яке неонове кільце, без різкої рамки) */
+.bonus-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(from 0deg,
+    rgba(255,77,122,.95),
+    rgba(123,43,255,.95),
+    rgba(255,209,166,.70),
+    rgba(255,77,122,.95)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: blur(10px);
+  opacity: .95;
+  animation: none;
+  pointer-events:none;
+}
+
+/* Глянцевий "sweep" по плашці */
+.bonus-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: inherit;
+  /* без вертикальної "полоски": тільки м'які радіальні відблиски */
+  background:
+    radial-gradient(120% 140% at 24% 18%, rgba(255,255,255,.12), rgba(255,255,255,0) 55%),
+    radial-gradient(90% 120% at 80% 110%, rgba(123,43,255,.18), rgba(0,0,0,0) 56%);
+  pointer-events:none;
+  opacity: 1;
+}
+
+@keyframes bonusRingSpin{ to { transform: rotate(360deg); } }
+@keyframes bonusSheen{
+  0%   { background-position: 0 0, 0 0, -190% 0; }
+  50%  { background-position: 0 0, 0 0,  -10% 0; }
+  100% { background-position: 0 0, 0 0, -190% 0; }
+}
+
+.bonus-card > *{ position: relative; z-index: 1; }
+
+.bonus-badge{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  letter-spacing: .16em;
+  font-weight: 800;
+  color: rgba(255,255,255,.95);
+  background: linear-gradient(135deg, rgba(255,77,122,.62), rgba(123,43,255,.55));
+  box-shadow: 0 10px 22px rgba(0,0,0,.35), 0 0 24px rgba(255,77,122,.18);
+  border: 1px solid rgba(255,255,255,.14);
+}
+
+/* Стікер — більше "преміум" та помітніший */
+.bonus-sticker{
+  width: 104px;
+  height: 104px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 26px;
+  background: radial-gradient(120% 120% at 30% 22%, rgba(255,255,255,.10), rgba(255,255,255,0) 58%),
+              radial-gradient(140% 130% at 70% 78%, rgba(123,43,255,.16), rgba(0,0,0,0) 60%),
+              linear-gradient(135deg, rgba(255,77,122,.14), rgba(123,43,255,.12), rgba(255,209,166,.08));
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 12px 28px rgba(0,0,0,.38), 0 0 34px rgba(255,255,255,.16);
+}
+.bonus-sticker::before{
+  content:"";
+  position:absolute;
+  inset:-14px;
+  border-radius: 50%;
+  /* біле світло під подарунком */
+  background: radial-gradient(circle at 50% 55%,
+    rgba(255,255,255,.55) 0%,
+    rgba(255,255,255,.22) 32%,
+    rgba(255,255,255,0) 66%
+  );
+  filter: blur(16px);
+  opacity: .95;
+  animation: none;
+  pointer-events:none;
+}
+.gift-svg{
+  width: 104px;
+  height: 104px;
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0) scale(1.03);
+  filter:
+    drop-shadow(0 18px 26px rgba(0,0,0,.55))
+    drop-shadow(0 0 26px rgba(255,77,122,.22))
+    drop-shadow(0 0 22px rgba(123,43,255,.18));
+}
+
+/* v93: GIFТ-стікер як зображення + анімація (плашка без анімацій) */
+.gift-picture{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.gift-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translateZ(0) scale(1.06);
+  filter:
+    drop-shadow(0 18px 26px rgba(0,0,0,.55))
+    drop-shadow(0 0 40px rgba(255,255,255,.30))
+    drop-shadow(0 0 72px rgba(255,255,255,.16));
+  animation: giftPremiumFloat 2.85s ease-in-out infinite;
+  will-change: transform, filter;
+}
+@keyframes giftPremiumFloat{
+  0%{
+    transform: translateY(0) rotate(-1.6deg) scale(1.06);
+    filter:
+      drop-shadow(0 18px 26px rgba(0,0,0,.55))
+      drop-shadow(0 0 40px rgba(255,255,255,.30))
+      drop-shadow(0 0 72px rgba(255,255,255,.16));
+  }
+  50%{
+    transform: translateY(-8px) rotate(1.6deg) scale(1.10);
+    filter:
+      drop-shadow(0 24px 34px rgba(0,0,0,.62))
+      drop-shadow(0 0 54px rgba(255,255,255,.36))
+      drop-shadow(0 0 92px rgba(255,255,255,.20));
+  }
+  100%{
+    transform: translateY(0) rotate(-1.6deg) scale(1.06);
+    filter:
+      drop-shadow(0 18px 26px rgba(0,0,0,.55))
+      drop-shadow(0 0 40px rgba(255,255,255,.30))
+      drop-shadow(0 0 72px rgba(255,255,255,.16));
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .gift-img{ animation: none !important; }
+}
+
+
+/* Заголовок плашки — трохи "дорогіше" */
+.bonus-title{
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.22;
+}
+@supports (-webkit-background-clip: text){
+  .bonus-title{
+    background: linear-gradient(90deg, rgba(255,255,255,.98), rgba(255,209,166,.95), rgba(255,77,122,.95));
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 12px 26px rgba(0,0,0,.30);
+  }
+}
+
+/* Мобільна адаптація: стікер зверху, текст під ним (щоб красиво і не тісно) */
+@media (max-width: 560px){
+  .bonus-card{
+    margin: 12px 14px 6px;
+    padding: 14px 14px 14px 14px;
+    grid-template-columns: 1fr !important;
+    text-align: left;
+  }
+  .bonus-sticker{
+    width: 92px;
+    height: 92px;
+    margin: 2px auto 10px;
+  }
+  .gift-svg{ width: 92px; height: 92px; }
+  .bonus-title{
+    text-align: center;
+    font-size: 14.8px;
+  }
+  .bonus-items{
+    margin-top: 10px;
+    font-size: 13.4px;
+  }
+  .bonus-badge{
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 6px 9px;
+  }
+}
+
+@media (max-width: 380px){
+  .bonus-card{ margin: 12px 12px 6px; padding: 13px; }
+  .bonus-items{ font-size: 13.1px; }
+}
+
+</style>
+  <meta name="build" content="v93" />
+
+<style id="hero-v56">
+/* v56: mobile 2 lines edge-to-edge + premium marker gradient behind title+tagline */
+@keyframes markerFlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes markerSheen{0%{transform:translateX(-140%) skewX(-18deg);opacity:0}12%{opacity:.18}32%{opacity:0}100%{transform:translateX(140%) skewX(-18deg);opacity:0}}
+
+.hero .wrap .h1{ 
+  position: relative !important;
+  display: inline-block !important;
+  text-align: center !important;
+  max-width: min(760px, 94vw) !important;
+  padding: 18px 18px 16px !important;
+  border-radius: 28px !important;
+  isolation: isolate !important;
+}
+
+/* One shared "marker" gradient under BOTH lines (soft, no hard edges) */
+.hero .wrap .h1::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:-26px -30px !important;
+  border-radius: 60px !important;
+  background:
+    radial-gradient(120% 120% at 12% 18%, rgba(255,77,109,0.13) 0%, rgba(141,65,255,0.11) 42%, rgba(210,110,170,0.10) 68%, rgba(0,0,0,0) 100%),
+    radial-gradient(120% 120% at 86% 62%, rgba(141,65,255,0.10) 0%, rgba(255,77,109,0.08) 45%, rgba(0,0,0,0) 100%),
+    repeating-linear-gradient(-14deg,
+      rgba(255,77,109,0.05) 0 14px,
+      rgba(141,65,255,0.045) 14px 28px,
+      rgba(210,110,170,0.048) 28px 42px
+    ),
+    linear-gradient(120deg,
+      rgba(255,77,109,0.08) 0%,
+      rgba(141,65,255,0.08) 45%,
+      rgba(210,110,170,0.08) 85%,
+      rgba(255,77,109,0.07) 100%
+    );
+  background-size: 240% 240% !important;
+  animation: markerFlow 10s ease-in-out infinite !important;
+  filter: blur(34px) saturate(1.06) !important;
+  opacity: 0.92 !important;
+  z-index: -1 !important;
+  pointer-events:none !important;
+}
+
+.hero .wrap .h1::after{
+  content:'' !important;
+  position:absolute !important;
+  top:-40px !important;
+  bottom:-40px !important;
+  left:0 !important;
+  width:60% !important;
+  border-radius:999px !important;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.075), rgba(255,255,255,0)) !important;
+  filter: blur(16px) !important;
+  z-index:-1 !important;
+  animation: markerSheen 7.2s ease-in-out infinite !important;
+  opacity: .75 !important;
+  pointer-events:none !important;
+}
+
+/* Title: desktop one line */
+.hero .wrap .h1 .h1-title{
+  display:block !important;
+  margin:0 !important;
+  font-family: 'Playfair Display','Montserrat',serif !important;
+  font-weight:900 !important;
+  letter-spacing: .01em !important;
+  line-height: 1.06 !important;
+  white-space: nowrap !important;
+  font-size: clamp(30px, 4.2vw, 64px) !important;
+  text-shadow: 0 18px 52px rgba(0,0,0,0.55) !important;
+}
+.hero .wrap .h1 .h1-title .t1,
+.hero .wrap .h1 .h1-title .t2{ display:inline !important; }
+
+/* Tagline */
+.hero .wrap .h1 .h1-tagline{
+  display:block !important;
+  margin-top: 14px !important;
+  font-family: 'Italiana','Cormorant Garamond',serif !important;
+  font-weight: 400 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.18 !important;
+  font-size: clamp(16px, 2.1vw, 28px) !important;
+  text-shadow: 0 14px 34px rgba(0,0,0,0.42) !important;
+}
+
+/* Mobile: title forced into 2 lines and edge-to-edge */
+@media (max-width: 768px){
+  .hero .wrap .h1{
+    display:block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important; /* breaks out of .wrap padding */
+    margin-right: 0 !important;
+    padding: 16px 14px 14px !important;
+    border-radius: 24px !important;
+  }
+  .hero .wrap .h1::before{ inset:-28px -22px !important; filter: blur(36px) saturate(1.06) !important; }
+  .hero .wrap .h1 .h1-title{
+    white-space: normal !important;
+    font-size: clamp(34px, 10.4vw, 46px) !important;
+    line-height: 1.02 !important;
+    text-wrap: balance !important;
+  }
+  .hero .wrap .h1 .h1-title .t1,
+  .hero .wrap .h1 .h1-title .t2{ display:block !important; }
+  .hero .wrap .h1 .h1-title .t2{ margin-top: 2px !important; }
+  .hero .wrap .h1 .h1-tagline{
+    font-size: clamp(15px, 4.8vw, 21px) !important;
+    margin-top: 12px !important;
+  }
+}
+</style>
+
+
+<style id="v68-mobile-title-fix">
+/* === v68: FIX мобільного заголовка (центр + вміщення) === */
+@media (max-width: 768px){
+  /* гарантовано центруємо контейнер, якщо раптом десь зʼїхало */
+  .hero .wrap{
+    text-align: center !important;
+  }
+
+  /* прибираємо «винос на весь екран» (margin-left: calc(50% - 50vw)), щоб блок не їхав вліво */
+  .hero .wrap .h1{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* головний заголовок — менший і по центру, щоб точно вміщався */
+  .hero .wrap .h1 .h1-title{
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    font-size: clamp(24px, 8.0vw, 36px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.012em !important;
+
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+
+    white-space: normal !important;
+    text-wrap: balance;
+  }
+
+  .hero .wrap .h1 .h1-title .t1,
+  .hero .wrap .h1 .h1-title .t2{
+    display:block !important;
+    font-size: 1em !important;
+    margin: 0 !important;
+  }
+
+  /* 2-й рядок одним рядком — якщо не влазить, JS auto-fit піджимає розмір */
+  .hero .wrap .h1 .h1-title .t2{
+    white-space: nowrap !important;
+    margin-top: 6px !important;
+  }
+}
+
+/* дуже вузькі екрани — трохи менше */
+@media (max-width: 390px){
+  .hero .wrap .h1 .h1-title{
+    font-size: clamp(23px, 8.2vw, 34px) !important;
+    padding: 0 8px !important;
+  }
+}
+@media (max-width: 360px){
+  .hero .wrap .h1 .h1-title{
+    font-size: clamp(22px, 8.4vw, 32px) !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="top">
+
+    <div class="hero-topbar" aria-label="Назва курсу і дата старту">
+      <div class="hero-topline">Онлайн-курс "ПЛЕТІННЯ У 7 КРОКАХ"</div>
+      <div class="hero-topline hero-topline--sub">СТАРТ - <span class="hero-date">19 січня</span></div>
+    </div>
+
+  <div class="wrap">
+
+    <div class="h1"><span class="h1-title"><span class="t1">7 кроків до</span> <span class="t2">трендових плетінь</span></span>
+      <span class="h1-tagline">Створюй шедеври своїми руками — з нуля до профі</span></div>
+    <p class="sub">Проста покрокова система: від першого пасма до ідеальної зачіски. Без води та складних термінів</p>
+
+    <div class="price"><div class="price-line1">СПЕЦІАЛЬНА ЦІНА - <span class="now">890 грн</span></div><div class="price-line2">(ЗВИЧАЙНА <span class="old">3890 грн</span>)</div></div>
+
+    <!-- TODO: заміни лінк на оплату/бот -->
+    <a class="btn" href="#" data-open="purchase" target="_blank" rel="noopener">
+      ПРИЄДНАТИСЯ
+      <span class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </a>
+
+    <div class="timer" aria-label="Таймер (30 хвилин)">
+      <div class="tbox"><div class="num" id="hh">00</div><div class="lbl">Годин</div></div>
+      <div class="tbox"><div class="num" id="mm">30</div><div class="lbl">Хвилин</div></div>
+      <div class="tbox"><div class="num" id="ss">00</div><div class="lbl">Секунд</div></div>
+    </div>
+
+
+    <div class="bonus-card" role="note" aria-label="Подарунок за приєднання">
+      <div class="bonus-sticker" aria-hidden="true">
+        <picture class="gift-picture">
+          <source srcset="gift-premium.webp" type="image/webp">
+          <img src="gift-premium.png" class="gift-img" alt="Подарунок" loading="lazy" decoding="async">
+        </picture>
+      </div>
+
+      <div class="bonus-content">
+        <div class="bonus-title">Приєднайся зараз та отримай у подарунок</div>
+        <div class="bonus-items">
+          <div class="bonus-item"><span class="b-ic b-ic--file" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h8"/></svg></span>Гайд «30‑денний план постів та сторіс для брейдера»</div>
+          <div class="bonus-item"><span class="b-ic b-ic--book" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19a2 2 0 0 1 2-2h14"/><path d="M6 3h14v18H6a2 2 0 0 0-2 2V5a2 2 0 0 1 2-2z"/><path d="M9 7h8"/><path d="M9 11h8"/></svg></span>Методичку брейдера</div>
+          <div class="bonus-item"><span class="b-ic b-ic--tg" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 3L2 11l7 2 2 7 11-17z"/><path d="M22 3L9 13"/><path d="M9 13l2 7"/></svg></span>Доступ до закритого чату</div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="checks">
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>7 коротких відео‑уроків (Telegram), які дивишся у своєму темпі</li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Доступ назавжди — повертаєшся, коли потрібно</li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Проділи, натяг, чистота плетіння та фіксація — зрозуміло й по кроках</li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Фішки для «дорогого» вигляду та охайного фінішу</li>
+      <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-5-5" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Як презентувати результат у сторіз і отримувати записи</li>
+    </ul>
+  </div>
+</header>
+
+<section class="section light-panel" id="for-you">
+  <div class="wrap">
+    <div class="h2">Кому підійде цей онлайн‑курс?</div>
+
+    <div class="cards3">
+      <div class="card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#12121a" stroke-width="2"/><path d="M2 12h20" stroke="#12121a" stroke-width="2"/></svg>
+        </div>
+        <h3>Якщо ти починаєш з нуля</h3>
+        <p>Отримаєш зрозумілий алгоритм: як стартувати й не губитися в процесі.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="#12121a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Якщо плетеш, але «не так чисто»</h3>
+        <p>Проділи, натяг, фініш — піднімеш якість і впевненість.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21s8-4.5 8-11a5 5 0 0 0-8-3 5 5 0 0 0-8 3c0 6.5 8 11 8 11z" stroke="#12121a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Якщо хочеш продавати плетіння</h3>
+        <p>Зрозумієш, як показати роботу в сторіз, щоб це приводило клієнтів.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section author" id="about">
+  <div class="wrap">
+    <div class="author-grid">
+      <div class="author-photo">
+        <img src="./author.jpg" alt="Петрик Аліна" />
+      </div>
+
+      <div class="author-card">
+        <div class="name"><span>Петрик Аліна</span></div>
+        <p>Я створила цей онлайн‑курс, щоб ти не «вчилася роками на помилках», а одразу отримала чіткі кроки, які дають результат.</p>
+        <p>Плетіння — це не лише про красу. Це навичка, яка може стати стабільним доходом, коли є система.</p>
+
+        <ul>
+          <li>Понад 7 років у плетінні та роботі з образами</li>
+          <li>100+ учениць, які стартували з нуля</li>
+          <li>Фокус: охайність, швидкість, трендовість і подача роботи</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section proof" id="proof">
+  <div class="wrap">
+    <div class="h2 upper">Приклади реакцій учасниць</div>
+    <div class="hint">Це стилізація, щоб виглядало як у зразку. Надішлеш свої скріни/тексти — вставлю їх замість цих повідомлень.</div>
+
+    <div class="phone">
+      <div class="screen">
+        <div class="msg">
+          <img src="./avatar.jpg" alt="Аватар" />
+          <div class="bubble">«Нарешті зрозуміла натяг! Раніше руки “гуляли”, а зараз лінія рівна 😍»</div>
+        </div>
+        <div class="msg">
+          <img src="./avatar.jpg" alt="Аватар" />
+          <div class="bubble">«Крок про проділи — золото. Мої боксерки виглядають набагато охайніше»</div>
+        </div>
+        <div class="msg">
+          <img src="./avatar.jpg" alt="Аватар" />
+          <div class="bubble">«Після уроку про фініш перестало “пушити”. Фото вийшли як для портфоліо ✨»</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section program" id="program">
+  <div class="wrap">
+    <div class="h2">Що ти знайдеш у програмі курсу?</div>
+  </div>
+
+  <div class="program-bg">
+    <div class="wrap">
+
+      <div class="step">
+        <div class="pic"><img src="./step1.jpg" alt="Крок 1" /></div>
+        <div>
+          <div class="krok">КРОК 1</div>
+          <ul>
+            <li>Підготовка: інструменти, матеріали, світло, посадка</li>
+            <li>Як зробити так, щоб з першої спроби було <span class="highlight">комфортно</span> і <span class="highlight">охайно</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step2.jpg" alt="Крок 2" /></div>
+        <div>
+          <div class="krok">КРОК 2</div>
+          <ul>
+            <li>База: техніка плетіння + підхвати</li>
+            <li>Контроль натягу — без болю і без «горбиків»</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step3.jpg" alt="Крок 3" /></div>
+        <div>
+          <div class="krok">КРОК 3</div>
+          <ul>
+            <li>Розмітка і проділи: як робити рівно та симетрично</li>
+            <li>Схема для боксерок, щоб лінія не «поїхала»</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step4.jpg" alt="Крок 4" /></div>
+        <div>
+          <div class="krok">КРОК 4</div>
+          <ul>
+            <li>Чистота плетіння: як прибирати «пушок» і тримати форму</li>
+            <li>Що робити з коротким/тонким волоссям</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step5.jpg" alt="Крок 5" /></div>
+        <div>
+          <div class="krok">КРОК 5</div>
+          <ul>
+            <li>Трендові елементи й декор (акценти, текстури)</li>
+            <li>Як зробити вигляд <span class="highlight">преміальним</span> і не «перевантажити»</li>
+            <li>Швидкі прийоми для виразності та об’єму</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step6.jpg" alt="Крок 6" /></div>
+        <div>
+          <div class="krok">КРОК 6</div>
+          <ul>
+            <li>Фініш: фіксація, обробка, щоб трималось довше</li>
+            <li>Як зробити результат ідеальним для фото/відео</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="pic"><img src="./step7.jpg" alt="Крок 7" /></div>
+        <div>
+          <div class="krok">КРОК 7</div>
+          <ul>
+            <li>Догляд + як презентувати роботу в сторіз і отримати записи</li>
+            <li>Міні‑скрипт для сторіз і поради, як підняти середній чек</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section how" id="how">
+  <div class="wrap">
+    <div class="h2 upper">Як проходить курс?</div>
+
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="icon" aria-hidden="true">
+          <!-- Telegram icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21.5 4.5L2.6 11.8c-1.2.5-1.2 1.2-.2 1.5l4.9 1.5 1.9 5.8c.2.6.1.8.8.8.5 0 .7-.2 1-.5l2.4-2.4 5 3.7c.9.5 1.6.2 1.8-.9l3-14.1c.3-1.3-.5-1.9-1.7-1.4z" stroke="#12121a" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>У Telegram</h3>
+        <p>Після оплати ти отримуєш доступ і дивишся уроки в зручний час.</p>
+      </div>
+
+      <div class="how-item">
+        <div class="icon" aria-hidden="true">
+          <!-- Video icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="#12121a" stroke-width="2"/><path d="M10 9l5 3-5 3V9z" fill="#fff"/></svg>
+        </div>
+        <h3>Короткі уроки</h3>
+        <p>Кожен крок — конкретний, без зайвого. Одразу повторюєш і бачиш прогрес.</p>
+      </div>
+
+      <div class="how-item">
+        <div class="icon" aria-hidden="true">
+          <!-- Infinity icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 15c-1.7 0-3-1.3-3-3s1.3-3 3-3c3 0 7 6 10 6 1.7 0 3-1.3 3-3s-1.3-3-3-3c-3 0-7 6-10 6z" stroke="#12121a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Доступ назавжди</h3>
+        <p>Повертаєшся до матеріалів у будь‑який момент, коли потрібно підсилити навичку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="h2 upper">Відгуки</div>
+    <div class="hint">Зараз тут приклади оформлення. Надішли свої — заміню 1:1, як на скріні.</div>
+
+    <div class="slider" aria-label="Слайдер відгуків">
+      <button class="navbtn left" aria-label="Попередній" onclick="prevSlide()">‹</button>
+      <button class="navbtn right" aria-label="Наступний" onclick="nextSlide()">›</button>
+
+      <div class="frame">
+        <div class="slide active">
+          <div class="chat">
+            <img src="./avatar.jpg" alt="Аватар" />
+            <div class="txt">Курс дуже чіткий. Після кроку про проділи мої плетіння виглядають набагато рівніше 😍</div>
+            <div class="like"><span>❤</span></div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="chat">
+            <img src="./avatar.jpg" alt="Аватар" />
+            <div class="txt">Найкраще — фініш і фіксація. Раніше все «розлазилось», а зараз тримається красиво.</div>
+            <div class="like"><span>❤</span></div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="chat">
+            <img src="./avatar.jpg" alt="Аватар" />
+            <div class="txt">Дуже подобається, що уроки короткі. Подивилась — і одразу повторила на манекені 💪</div>
+            <div class="like"><span>❤</span></div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="chat">
+            <img src="./avatar.jpg" alt="Аватар" />
+            <div class="txt">Крок про сторіз — ❤️. Опублікувала результат і отримала перші запити!</div>
+            <div class="like"><span>❤</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dots" role="tablist" aria-label="Крапки слайдера">
+        <div class="dot active" onclick="goSlide(0)"></div>
+        <div class="dot" onclick="goSlide(1)"></div>
+        <div class="dot" onclick="goSlide(2)"></div>
+        <div class="dot" onclick="goSlide(3)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section benefits" id="benefits">
+  <div class="wrap">
+    <div class="h2 upper">Що ти отримаєш завдяки цьому курсу?</div>
+
+    <div class="benefit-stack">
+      <div class="benefit-big">
+        Після курсу в тебе буде <b>система</b>: ти розумієш, що робити на кожному етапі — від підготовки й проділів до фіксації та подачі в сторіз. Це дає <b>впевненість</b>, <b>якість</b> і сильніші продажі.
+      </div>
+
+      <div class="benefit-card">
+        <div class="circ"><img src="./benefit1.jpg" alt="Результат" /></div>
+        <p>Чисті проділи + рівний натяг — плетіння виглядає акуратно і «дорого».</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="circ"><img src="./benefit2.jpg" alt="Результат" /></div>
+        <p>Фініш і фіксація, щоб трималось довше та гарно виглядало на фото/відео.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="circ"><img src="./benefit3.jpg" alt="Результат" /></div>
+        <p>Готові фішки, як показати результат у сторіз і перетворити перегляди на записи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section buy" id="buy">
+  <div class="wrap">
+    <div class="buy-card">
+      <div class="bigprice"><b>890 грн</b></div>
+      <div class="oldline">Звичайна ціна: <s>3890 грн</s></div>
+
+      <!-- TODO: заміни лінк на оплату/бот -->
+      <a class="btn2" href="#" data-open="purchase" target="_blank" rel="noopener">ХОЧУ ДОСТУП</a>
+
+      <div class="label">До кінця промо (30 хв):</div>
+      <div class="timer" aria-label="Таймер (30 хвилин) дубль">
+        <div class="tbox"><div class="num" id="hh2">00</div><div class="lbl">Годин</div></div>
+        <div class="tbox"><div class="num" id="mm2">30</div><div class="lbl">Хвилин</div></div>
+        <div class="tbox"><div class="num" id="ss2">00</div><div class="lbl">Секунд</div></div>
+      </div>
+</div>
+  </div>
+</section>
+
+<section class="section guarantee" id="guarantee">
+  <div class="wrap">
+    <div class="gbox">
+      <h3>Гарантія ефективності</h3>
+      <div class="quote">„</div>
+      <p>Я зробила курс максимально практичним. Якщо тобі не підійде формат — додай свої умови повернення, і я вставлю їх у цей блок.</p>
+      <p>Ти нічим не ризикуєш: або отримуєш навичку, яка підсилює роботу, або діємо за умовами повернення.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="h2">Маєш питання? Тут знайдеш відповіді</div>
+
+    <div class="acc">
+      <div class="item">
+        <div class="q" onclick="toggleAcc(this)"><span>Де буде курс і як я отримаю доступ?</span><div class="chev"></div></div>
+        <div class="a">Після оплати ти отримуєш посилання/запрошення в Telegram з уроками та матеріалами.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleAcc(this)"><span>Чи потрібен досвід, щоб почати?</span><div class="chev"></div></div>
+        <div class="a">Ні. Є чіткі кроки, які підходять і для старту з нуля, і для покращення якості, якщо ти вже плетеш.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleAcc(this)"><span>Скільки часу потрібно на проходження?</span><div class="chev"></div></div>
+        <div class="a">Ти проходиш у своєму темпі. Доступ — назавжди, можна повертатися скільки завгодно разів.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleAcc(this)"><span>Чи потрібні спеціальні інструменти?</span><div class="chev"></div></div>
+        <div class="a">Ні. У першому кроці є список базового набору — почати можна з мінімуму.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleAcc(this)"><span>Чи є повернення коштів?</span><div class="chev"></div></div>
+        <div class="a">Можна додати правила повернення під твої умови. Надішли текст — вставлю 1:1.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="foot-name">Петрик Аліна</div>
+    <div class="foot-line">Телефон: __________</div>
+    <div class="foot-line">Email: __________@gmail.com</div>
+    <div class="foot-line">Instagram: __________</div>
+  </div>
+
+  <div class="wrap">
+    <div class="mini-links">
+      <a href="#" class="mini-link" data-open="offer">Публічна оферта</a>
+      <span class="mini-sep">•</span>
+      <a href="#" class="mini-link" data-open="privacy">Політика конфіденційності</a>
+    </div>
+  </div>
+</footer>
+
+
+<a class="sticky" href="#" data-open="purchase">ХОЧУ ДОСТУП</a>
+
+
+
+<!-- ===== MODALS ===== -->
+<div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" aria-label="Закрити" onclick="closeModal()">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+
+<script>
+  
+  // =========================
+  // 30-хвилинний таймер (від першого відкриття сторінки)
+  // =========================
+  const COUNTDOWN_KEY = "apspace_7krokiv_countdown_end";
+  const COUNTDOWN_MS = 30 * 60 * 1000; // 30 хвилин
+
+  function getEndTime(){
+    const saved = localStorage.getItem(COUNTDOWN_KEY);
+    const now = Date.now();
+    if (saved && !Number.isNaN(Number(saved)) && Number(saved) > now){
+      return Number(saved);
+    }
+    const end = now + COUNTDOWN_MS;
+    localStorage.setItem(COUNTDOWN_KEY, String(end));
+    return end;
+  }
+  let countdownEnd = getEndTime();
+
+  function pad2(n){ return String(Math.max(0, n)).padStart(2,'0'); }
+  function getDiff(){
+    const now = Date.now();
+    let diff = countdownEnd - now;
+    if (diff < 0) diff = 0;
+    return diff;
+  }
+
+  function tick(){
+    const diff = getDiff();
+    const total = Math.floor(diff/1000);
+
+    const h = Math.floor(total/3600);
+    const m = Math.floor((total%3600)/60);
+    const s = total%60;
+
+    const sets = [['hh','mm','ss'],['hh2','mm2','ss2']];
+    sets.forEach(ids=>{
+      const elH = document.getElementById(ids[0]);
+      const elM = document.getElementById(ids[1]);
+      const elS = document.getElementById(ids[2]);
+      if(elH) elH.textContent = pad2(h);
+      if(elM) elM.textContent = pad2(m);
+      if(elS) elS.textContent = pad2(s);
+    });
+
+    // Purchase modal timer (days/hours/minutes/seconds)
+    const d = Math.floor(total/86400);
+    const hh = Math.floor((total%86400)/3600);
+    const mm = Math.floor((total%3600)/60);
+    const ss = total%60;
+
+    const pD = document.getElementById('pd');
+    const pH = document.getElementById('ph');
+    const pM = document.getElementById('pm');
+    const pS = document.getElementById('ps');
+    if(pD) pD.textContent = String(d);
+    if(pH) pH.textContent = String(hh);
+    if(pM) pM.textContent = String(mm);
+    if(pS) pS.textContent = String(ss);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // =========================
+  // MODALS
+  // =========================
+  const overlay = document.getElementById('modalOverlay');
+  const bodyEl = document.getElementById('modalBody');
+
+  function openModal(html){
+    bodyEl.innerHTML = html;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    
+    
+document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    tick(); // sync timer immediately
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    bodyEl.innerHTML = '';
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+  }
+  window.closeModal = closeModal;
+
+  overlay.addEventListener('click', (e)=>{
+    if(e.target === overlay) closeModal();
+  });
+  window.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+
+  // =========================
+  // Content: OFFER + PRIVACY
+  // =========================
+  const OFFER_HTML = `
+    <div class="p-title" id="modalTitle">Публічна оферта (Україна)</div>
+    <div style="font-size:13px; line-height:1.65; color:#222;">
+      <p><b>1. Загальні положення.</b> Цей документ є публічною пропозицією (офертою) Виконавця укласти договір про надання інформаційних послуг у форматі онлайн‑доступу до онлайн‑курсу «7 кроків до трендових плетінь» (далі — «Курс») з будь‑якою повнолітньою особою (далі — «Клієнт»).</p>
+      <p><b>2. Предмет.</b> Виконавець надає Клієнту доступ до навчальних матеріалів Курсу (відео/текст/файли) після оплати. Матеріали мають інформаційний характер.</p>
+      <p><b>3. Оплата та доступ.</b> Оплата здійснюється онлайн. Після успішної оплати Клієнт отримує інструкцію та доступ (посилання/запрошення у Telegram або інший канал, зазначений на сторінці продажу).</p>
+      <p><b>4. Авторські права.</b> Усі матеріали Курсу охороняються авторським правом. Заборонено копіювати, поширювати, продавати або передавати доступ третім особам без письмової згоди Виконавця.</p>
+      <p><b>5. Відповідальність.</b> Результат залежить від практики та дотримання рекомендацій. Виконавець не гарантує конкретний фінансовий результат.</p>
+      <p><b>6. Повернення коштів.</b> Умови повернення публікуються на сторінці продажу або повідомляються перед оплатою. (Надішли свої точні умови — я вставлю їх у цей блок.)</p>
+      <p><b>7. Персональні дані.</b> Дані Клієнта обробляються для забезпечення доступу, комунікації та виконання цього договору.</p>
+      <p><b>8. Контакти.</b> Реквізити та контакти Виконавця розміщені у розділі «Контакти» на цій сторінці.</p>
+    </div>
+  `;
+
+  const PRIVACY_HTML = `
+    <div class="p-title" id="modalTitle">Політика конфіденційності</div>
+    <div style="font-size:13px; line-height:1.65; color:#222;">
+      <p>Ми збираємо мінімально необхідні дані (email і телефон) виключно для надання доступу до курсу та зв’язку з клієнтом.</p>
+      <p>Дані не продаються третім особам і зберігаються стільки, скільки потрібно для виконання зобов’язань та підтримки клієнта.</p>
+      <p>Щоб видалити дані або отримати копію — звернись через контакти внизу сторінки.</p>
+    </div>
+  `;
+
+  // =========================
+  // Purchase popup (like screenshot)
+  // =========================
+  const PRODUCT_NAME = "7 кроків до трендових плетінь";
+  const DIRECT_PAY_URL = "https://secure.wayforpay.com/button/b6814b771ec65"; 
+  const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbxVSNaNe6eUC6gzfWU4tZphviM-JDlbKmSZ3sSJooYLv49QY5UF58bBtOnemL_f4e8wBg/exec"; // URL Google Apps Script Web App для збору заявок (Sheets + Telegram)
+// встав сюди пряме посилання на оплату (якщо є)
+  // Якщо DIRECT_PAY_URL порожній — буде використано pay.php (серверний WayForPay)
+
+  const PRICE_NEW = "890 грн";
+  const PRICE_OLD = "3890 грн";
+
+  // TODO: встав свій лінк на оплату (WayForPay/liqpay/бот тощо)
+  const PAYMENT_URL = "https://example.com";
+
+  function openPurchase(){
+    const html = `
+      <div class="p-title" id="modalTitle">
+        Заповни форму і отримай доступ до онлайн‑курсу «${PRODUCT_NAME}» — практичні техніки, які допоможуть розвинути твою навичку.
+      </div>
+
+      <div class="p-price"><span class="pill"><span class="n">${PRICE_NEW}</span><span class="o">${PRICE_OLD}</span></span></div>
+
+      <div class="p-label">Email*</div>
+      <input class="p-input" id="pEmail" type="email" autocomplete="email" required />
+
+      <div class="p-label" style="margin-top:14px;">Номер телефону*</div>
+      <input class="p-input" id="pPhone" name="phone" type="tel" required inputmode="tel" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="off" />
+
+      <button class="p-btn" id="pSubmit" type="button" onclick="submitPurchase()" disabled><span>ХОЧУ ДОСТУП</span></button>
+
+      <div class="p-timer" aria-label="Таймер до кінця акції">
+        <div class="p-tbox"><div class="num" id="pd">0</div><div class="lbl">Днів</div></div>
+        <div class="p-tbox"><div class="num" id="ph">0</div><div class="lbl">Годин</div></div>
+        <div class="p-tbox"><div class="num" id="pm">10</div><div class="lbl">Хвилин</div></div>
+        <div class="p-tbox"><div class="num" id="ps">00</div><div class="lbl">Секунд</div></div>
+      </div>
+
+      <div class="p-lock">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M7 10V8a5 5 0 0 1 10 0v2" stroke="#12121a" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6.5 10h11A1.5 1.5 0 0 1 19 11.5v8A2.5 2.5 0 0 1 16.5 22h-9A2.5 2.5 0 0 1 5 19.5v-8A1.5 1.5 0 0 1 6.5 10Z" stroke="#12121a" stroke-width="2"/>
+        </svg>
+        <div>Усі дані конфіденційні і потрібні лише для надання доступу та звʼязку.</div>
+      </div>
+    `;
+    openModal(html);
+    setTimeout(()=>{
+      const e = document.getElementById('pEmail');
+      const p = document.getElementById('pPhone');
+      if(e) e.addEventListener('input', updatePurchaseState);
+      if(p) p.addEventListener('input', updatePurchaseState);
+updatePurchaseState();
+    }, 0);
+
+  }
+
+  
+  function getUtm(){
+    const p = new URLSearchParams(window.location.search);
+    const keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+    const out = {};
+    keys.forEach(k=> out[k] = p.get(k) || "");
+    return out;
+  }
+
+  function sendLead(payload){
+    if(!LEAD_ENDPOINT || LEAD_ENDPOINT.trim().length === 0) return;
+
+    const params = new URLSearchParams();
+    Object.keys(payload).forEach(function(k){
+      if(payload[k] === undefined || payload[k] === null) return;
+      params.append(k, String(payload[k]));
+    });
+
+    const url = LEAD_ENDPOINT.trim();
+
+    // Надсилаємо ОДИН раз: спочатку sendBeacon (POST). Якщо не спрацювало — fallback на Image GET.
+    var sent = false;
+
+    try{
+      if (navigator && typeof navigator.sendBeacon === "function"){
+        var blob = new Blob([params.toString()], {type:"application/x-www-form-urlencoded;charset=UTF-8"});
+        sent = navigator.sendBeacon(url, blob) === true;
+      }
+    }catch(e){ sent = false; }
+
+    if(!sent){
+      try{
+        var img = new Image();
+        img.referrerPolicy = "no-referrer";
+        var bust = "_=" + Date.now();
+        var qs = params.toString();
+        img.src = url + "?" + (qs ? (qs + "&" + bust) : bust);
+      }catch(e2){ /* ignore */ }
+    }
+
+    // Debug (якщо додати ?debug=1 до URL лендінгу)
+    try{
+      var dbg = new URLSearchParams(window.location.search).get('debug');
+      if(dbg === '1'){
+        console.log('[LEAD_ENDPOINT]', url);
+        console.log('[LEAD_SENT_BY]', sent ? 'sendBeacon' : 'image');
+        // Не використовуємо Object.fromEntries для сумісності.
+      }
+    }catch(e3){}
+  }
+
+  function normalizePhoneDigits(raw){
+    let d = String(raw || "").replace(/\D/g, "");
+    // 0XXXXXXXXX -> 380XXXXXXXXX
+    if(d.length === 10 && d.startsWith("0")) d = "380" + d.slice(1);
+    return d;
+  }
+
+function updatePurchaseState(){
+    const email = (document.getElementById('pEmail')?.value || '').trim();
+    const phone = (document.getElementById('pPhone')?.value || '').trim();
+    const phoneDigits = normalizePhoneDigits(phone);
+    const btn = document.getElementById('pSubmit');
+    if(!btn) return;
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);        const phoneOk = /^380\d{9}$/.test(phoneDigits);
+    btn.disabled = !(emailOk && phoneOk);
+  }
+
+  function submitPurchase(){
+    const email = (document.getElementById('pEmail')?.value || '').trim();
+    const phone = (document.getElementById('pPhone')?.value || '').trim();
+    const phoneDigits = normalizePhoneDigits(phone);
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      alert("Перевір email: здається, він введений некоректно.");
+      return;
+    }
+    if(!/^380\d{9}$/.test(phoneDigits)){
+      alert("Будь ласка, введи коректний номер телефону. Приклад: 0981234567 або +380981234567");
+      return;
+    }
+
+    const utm = getUtm();
+    const lead = {
+      ts: new Date().toISOString(),
+      page: window.location.href,
+      email: email,
+      phone: phoneDigits,
+      product: 'Онлайн‑курс «7 кроків до трендових плетінь»',
+      price: String(PRICE_NEW),
+      currency: 'UAH',
+      country: 'Україна',
+      utm_source: utm.utm_source,
+      utm_medium: utm.utm_medium,
+      utm_campaign: utm.utm_campaign,
+      utm_content: utm.utm_content,
+      utm_term: utm.utm_term
+    };
+
+    // Fire-and-forget lead to Google Sheets + Telegram (Apps Script Web App)
+    sendLead(lead);
+
+    // 1) Якщо є готове пряме посилання на оплату — редіректимо туди
+    if (DIRECT_PAY_URL && DIRECT_PAY_URL.trim().length > 0){
+      try{
+        localStorage.setItem('ap_email', email);
+        localStorage.setItem('ap_phone', phoneDigits);
+      }catch(e){}
+      window.location.href = DIRECT_PAY_URL.trim();
+      return;
+    }
+
+    // 2) Серверний WayForPay (pay.php) — якщо ти вирішиш перейти на підписаний спосіб
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'pay.php';
+    form.style.display = 'none';
+
+    const fields = {
+      email: email,
+      phone: phoneDigits,
+      product: 'Онлайн‑курс «7 кроків до трендових плетінь»',
+      amount: String(PRICE_NEW),
+      currency: 'UAH'
+    };
+
+    Object.keys(fields).forEach((k)=>{
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = k;
+      input.value = fields[k];
+      form.appendChild(input);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+  }
+  window.submitPurchase = submitPurchase;
+
+  // =========================
+  // Bind clicks
+  // =========================
+  document.addEventListener('click', (e)=>{
+    const el = e.target.closest('[data-open]');
+    if(!el) return;
+    e.preventDefault();
+    const type = el.getAttribute('data-open');
+    if(type === 'purchase') openPurchase();
+    if(type === 'offer') openModal(OFFER_HTML);
+    if(type === 'privacy') openModal(PRIVACY_HTML);
+  }, true);
+
+  // =========================
+  // Premium press animation for the HERO button only
+  // =========================
+  (function bindHeroPress(){
+    const heroBtn = document.querySelector('.btn[data-open="purchase"]');
+    if(!heroBtn) return;
+    const down = ()=> heroBtn.classList.add('is-pressed');
+    const up = ()=> heroBtn.classList.remove('is-pressed');
+    heroBtn.addEventListener('pointerdown', down);
+    heroBtn.addEventListener('pointerup', up);
+    heroBtn.addEventListener('pointercancel', up);
+    heroBtn.addEventListener('pointerleave', up);
+  })();
+
+  // =========================
+  // Slider + Accordion (залишаємо як було)
+  // =========================
+  let idx = 0;
+  function renderSlides(){
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dots = Array.from(document.querySelectorAll('.dot'));
+    if(!slides.length) return;
+    idx = Math.max(0, Math.min(idx, slides.length - 1));
+    slides.forEach((el,i)=>el.classList.toggle('active', i===idx));
+    dots.forEach((el,i)=>el.classList.toggle('active', i===idx));
+  }
+  function nextSlide(){
+    const slides = document.querySelectorAll('.slide');
+    if(!slides.length) return;
+    idx = (idx + 1) % slides.length;
+    renderSlides();
+  }
+  function prevSlide(){
+    const slides = document.querySelectorAll('.slide');
+    if(!slides.length) return;
+    idx = (idx - 1 + slides.length) % slides.length;
+    renderSlides();
+  }
+  function goSlide(i){
+    idx = i;
+    renderSlides();
+  }
+  window.nextSlide = nextSlide;
+  window.prevSlide = prevSlide;
+  window.goSlide = goSlide;
+
+  function toggleAcc(el){
+    const item = el.closest('.item');
+    item.classList.toggle('open');
+  }
+  window.toggleAcc = toggleAcc;
+
+</script>
+
+
+
+<script>
+(function(){
+  function formatTomorrowUA(){
+    const d = new Date();
+    d.setDate(d.getDate() + 1);
+    try{
+      return new Intl.DateTimeFormat('uk-UA', { day: 'numeric', month: 'long' }).format(d);
+    }catch(e){
+      const dd = String(d.getDate()).padStart(2,'0');
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      return dd + '.' + mm;
+    }
+  }
+
+  function setStartDateTomorrow(){
+    const dateText = formatTomorrowUA();
+
+    // 1) Найчастіше дата окремим елементом
+    const dateEl = document.querySelector('.hero-date') || document.querySelector('.start-date');
+    if(dateEl){
+      dateEl.textContent = dateText;
+      return;
+    }
+
+    // 2) Рідкісний варіант: один контейнер з id
+    const box = document.getElementById('startDateText');
+    if(box){
+      let span = box.querySelector('.start-date');
+      if(!span){
+        box.innerHTML = 'СТАРТ - <span class="start-date"></span>';
+        span = box.querySelector('.start-date');
+      }
+      span.textContent = dateText;
+    }
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', setStartDateTomorrow);
+  }else{
+    setStartDateTomorrow();
+  }
+})();
+
+
+/* === v65: auto-fit hero title on mobile (keeps both lines same size) === */
+(function(){
+  function autoFitHeroTitle(){
+    try{
+      if (window.matchMedia && !window.matchMedia("(max-width: 768px)").matches) return;
+      var title = document.querySelector(".hero .h1 .h1-title");
+      var t2 = title ? title.querySelector(".t2") : null;
+      if(!title || !t2) return;
+
+      // reset to CSS-controlled size first
+      title.style.fontSize = "";
+      // read current computed size (px)
+      var cs = window.getComputedStyle(title);
+      var base = parseFloat(cs.fontSize);
+      if(!base || isNaN(base)) return;
+
+      // available width inside title (clientWidth already excludes scrollbar; padding is included, so subtract it)
+      var padL = parseFloat(cs.paddingLeft) || 0;
+      var padR = parseFloat(cs.paddingRight) || 0;
+      var available = Math.max(0, title.clientWidth - padL - padR);
+
+      var minPx = 20;
+      // If second line doesn't fit, reduce font-size gradually
+      var guard = 0;
+      while(t2.scrollWidth > available && base > minPx && guard < 40){
+        base -= 1;
+        title.style.fontSize = base + "px";
+        guard += 1;
+      }
+    }catch(e){}
+  }
+
+  window.addEventListener("load", autoFitHeroTitle, { once: true });
+  window.addEventListener("resize", function(){
+    // debounce
+    clearTimeout(window.__heroFitT);
+    window.__heroFitT = setTimeout(autoFitHeroTitle, 120);
+  });
+})();
+
+</script>
+
+</body>
+</html>
